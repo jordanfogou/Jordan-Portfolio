@@ -21,15 +21,20 @@ export default function PCModelCanvas() {
   return (
     <Canvas
       shadows
-      camera={{ position: [0, 2, 10], fov: 45 }} // Ajustez la position pour une vue plus haute
+      camera={{ position: [0, 3, 10], fov: 45 }} // Ajustez la position pour une vue plus haute
       style={{ height: '100vh', width: '100%' }}
     >
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
       <Suspense fallback={null}>
-        <PCModel scale={0.45} /> {/* Ajustez `scale` pour réduire la taille du modèle */}
+        <PCModel scale={0.33} /> {/* Réduit la taille à 1/3 de l'original */}
       </Suspense>
-      <OrbitControls enableZoom={true} />
+      <OrbitControls 
+        enableZoom={false} // Désactive le zoom pour éviter la modification de la taille
+        enablePan={false} 
+        maxPolarAngle={Math.PI / 2} // Empêche la vue de descendre en dessous de l'horizon
+        minPolarAngle={Math.PI / 3} // Limite la vue à un angle légèrement au-dessus
+      />
     </Canvas>
   );
 }
