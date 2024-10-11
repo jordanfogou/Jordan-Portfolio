@@ -38,6 +38,7 @@ const Projects = () => {
       title: "ETS ISBE (Établissement d'ingénierie des services biomédicaux et électronique)",
       date: 'Mai 2022 - Juin 2022 (1 mois)',
       position: 'Stagiaire en informatique et technologie Biomédicale',
+      logo: '/ISBElogo.png',
       description: [
         "Durant mon stage à ETS ISBE, j'ai participé activement à la maintenance et l'optimisation de dispositifs médicaux et électroniques.",
         'Participation à la maintenance préventive et curative des dispositifs médicaux.',
@@ -69,7 +70,7 @@ const Projects = () => {
           {experienceData.map((experience, index) => (
             <motion.div
               key={index}
-              className={`relative flex flex-col items-start w-full md:w-3/4 lg:w-2/5 ${
+              className={`relative flex flex-col items-center w-full md:w-3/4 lg:w-2/5 ${
                 experience.side === 'left' ? 'md:ml-auto' : 'md:mr-auto'
               } bg-blue-950 p-4 rounded-md shadow-md border border-gray-200`}
               initial={{ opacity: 0, y: 50 }}
@@ -77,29 +78,30 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              <div className="flex flex-col items-start text-left">
-                {experience.logo && (
-                  <img
-                    src={experience.logo}
-                    alt={`${experience.title} Logo`}
-                    className="w-12 h-12 md:w-16 md:h-16 object-contain mb-2"
-                  />
-                )}
-                <h4 className="text-md md:text-xl font-semibold">{experience.title}</h4>
-                <p className="text-purple-300 text-sm md:text-base mt-1">{experience.descriptionShort}</p>
-                <p className="italic flex items-center mt-2">
-                  <FaCalendarAlt className="mr-2 text-purple-400" /> {experience.date}
-                </p>
-                <p className="font-semibold mt-2 text-sm md:text-base">{experience.position}</p>
-                <p className="mt-4 text-xs md:text-lg font-light leading-relaxed">
-                  {experience.description[0]}
-                </p>
-                <ul className="list-disc ml-4 mt-2 text-xs md:text-base">
-                  {experience.description.slice(1).map((desc, idx) => (
-                    <li key={idx}>{desc}</li>
-                  ))}
-                </ul>
-              </div>
+              {/* Logo centré */}
+              {experience.logo && (
+                <img
+                  src={experience.logo}
+                  alt={`${experience.title} Logo`}
+                  className="w-16 h-16 md:w-24 md:h-24 object-contain mb-4"
+                />
+              )}
+
+              {/* Informations de l'expérience */}
+              <h4 className="text-md md:text-xl font-semibold text-center">{experience.title}</h4>
+              <p className="text-purple-300 text-sm md:text-base mt-1 text-center">{experience.descriptionShort}</p>
+              <p className="italic flex items-center justify-center mt-2">
+                <FaCalendarAlt className="mr-2 text-purple-400" /> {experience.date}
+              </p>
+              <p className="font-semibold mt-2 text-sm md:text-base text-center">{experience.position}</p>
+              <p className="mt-4 text-xs md:text-lg font-light leading-relaxed text-left">
+                {experience.description[0]}
+              </p>
+              <ul className="list-disc ml-4 mt-2 text-xs md:text-base">
+                {experience.description.slice(1).map((desc, idx) => (
+                  <li key={idx}>{desc}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>

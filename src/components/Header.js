@@ -15,9 +15,12 @@ const Header = () => {
     <header className="relative h-[110vh] flex flex-col justify-between bg-gradient-to-br from-indigo-900 to-purple-800 text-white overflow-hidden">
       {/* Barre de navigation */}
       <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 py-4 bg-opacity-70 z-20">
-        <div className="text-lg sm:text-xl font-bold">
-          Jordan FOGOU
-        </div>
+      <div className="text-lg sm:text-xl font-bold">
+  Jordan FOGOU
+  <br />
+  <span className="text-blue-700">Bienvenue sur mon portfolio</span>
+</div>
+
         <nav className="hidden sm:flex space-x-4 text-sm sm:text-base">
           <a href="#competences" className="hover:text-purple-300 transition-colors">Compétences</a>
           <a href="#experiences" className="hover:text-purple-300 transition-colors">Expériences professionnelles</a>
@@ -79,8 +82,6 @@ const Header = () => {
         <div>
           <h1 className="text-3xl md:text-5xl font-bold">
             Salut, je suis <span className="text-blue-400">Jordan</span> {/* Changement de couleur */}
-            <br />
-            bienvenue sur mon portfolio {/* Ajout du texte supplémentaire */}
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
             Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique (réseau, cybersécurité, dev Full-stack ou autres).
