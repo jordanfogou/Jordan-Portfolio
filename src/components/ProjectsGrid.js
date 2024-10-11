@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
-    title: 'Réseau',
+    title: 'Réseau & système',
     description:
       "Concevoir, optimiser, analyser et sécuriser l’infrastructure réseau de plusieurs entités d’une ville. Mise en œuvre de configurations avancées pour garantir la qualité et la sécurité des communications.",
     technologies: ['Cisco PT', 'Wireshark', 'Active Directory'],
