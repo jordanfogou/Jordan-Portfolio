@@ -1,7 +1,7 @@
 // src/components/PCModel.js
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 
 function PCModel({ scale }) {
   const { scene } = useGLTF('/desktop_pc/scene.gltf');
@@ -29,12 +29,7 @@ export default function PCModelCanvas() {
       <Suspense fallback={null}>
         <PCModel scale={0.33} /> {/* Réduit la taille à 1/3 de l'original */}
       </Suspense>
-      <OrbitControls 
-        enableZoom={false} // Désactive le zoom pour éviter la modification de la taille
-        enablePan={false} 
-        maxPolarAngle={Math.PI / 2} // Empêche la vue de descendre en dessous de l'horizon
-        minPolarAngle={Math.PI / 3} // Limite la vue à un angle légèrement au-dessus
-      />
+      {/* OrbitControls est absent pour empêcher toute interaction manuelle */}
     </Canvas>
   );
 }

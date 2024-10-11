@@ -23,7 +23,7 @@ const Header = () => {
           <a href="#contact" className="hover:text-purple-300 transition-colors">Me contacter</a>
         </nav>
         <a
-          href="/cv jordan fogou informatique.pdf"
+          href="/CV jordan fogou R&D&I.pdf"
           download="CV_Jordan_Fogou.pdf"
           className="hidden sm:block px-4 py-2 bg-red-500 rounded-full text-white font-bold hover:bg-red-600 transition-colors shadow-lg"
         >
@@ -47,7 +47,7 @@ const Header = () => {
             Me contacter
           </a>
           <a
-            href="/cv jordan fogou informatique.pdf"
+            href="/CV jordan fogou R&D&I.pdf"
             download="CV_Jordan_Fogou.pdf"
             className="px-4 py-2 bg-red-500 rounded-full text-white font-bold hover:bg-red-600 transition-colors shadow-lg"
             onClick={toggleMenu}
@@ -80,7 +80,7 @@ const Header = () => {
             Salut, je suis <span className="text-purple-400">Jordan</span>
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
-            Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, Je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique( réseau ,cybersécurité , dev Full-stack ou autres).
+            Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique (réseau, cybersécurité, dev Full-stack ou autres).
           </p>
         </div>
       </motion.div>
