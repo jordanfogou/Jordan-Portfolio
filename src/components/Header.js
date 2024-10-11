@@ -1,0 +1,76 @@
+import React from 'react'; 
+import { motion } from 'framer-motion';
+import PCModelCanvas from './PCModel';
+import BackgroundAnimation from './BackgroundAnimation';
+
+const Header = () => {
+  return (
+    <header className="relative h-screen flex flex-col justify-between bg-gradient-to-br from-indigo-900 to-purple-800 text-white overflow-hidden">
+      {/* Barre de navigation */}
+      <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 py-4 bg-opacity-70 z-20">
+        <div className="text-lg sm:text-xl font-bold">
+          Jordan FOGOU
+        </div>
+        <nav className="hidden sm:flex space-x-4 text-sm sm:text-base">
+          <a href="#competences" className="hover:text-purple-300 transition-colors">Compétences</a>
+          <a href="#experiences" className="hover:text-purple-300 transition-colors">Expériences professionnelles</a>
+          
+          <a href="#contact" className="hover:text-purple-300 transition-colors">Me contacter</a>
+        </nav>
+        <a
+          href="/cv jordan fogou informatique.pdf" // Assurez-vous que le fichier est placé dans le dossier 'public'
+          download="CV_Jordan_Fogou.pdf"
+          className="hidden sm:block px-4 py-2 bg-red-500 rounded-full text-white font-bold hover:bg-red-600 transition-colors shadow-lg"
+        >
+          Télécharger mon CV
+        </a>
+        <button className="sm:hidden text-white">Menu</button>
+      </div>
+
+      {/* Texte principal avec la barre verticale stylisée et l'image de profil */}
+      <motion.div
+        className="absolute top-1/4 left-10 px-4 sm:px-8 md:px-16 lg:px-24 flex items-start"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.img
+          src="/profile-image.jpg"
+          alt="Photo de profil"
+          className="w-32 h-32 md:w-48 md:h-48 rounded-full shadow-lg border-4 border-purple-400 mr-4"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        />
+
+        <div className="w-1 h-48 sm:h-64 bg-purple-400 rounded-full mr-4"></div>
+
+        <div>
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Salut, je suis <span className="text-purple-400">Jordan</span>
+          </h1>
+          <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
+            Étudiant en première année du cycle ingénieur informatique  (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre , je suis passionné par l'administration et la sécurisation  des réseaux informatiques en passant par le développement web Fullstack .Je suis  Actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique .
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Modèle 3D dans la zone droite */}
+      <div className="absolute bottom-0 right-4 sm:right-10 w-full sm:w-1/2 h-1/2 sm:h-3/4">
+        <PCModelCanvas />
+      </div>
+
+      {/* Effet visuel de fond */}
+      <motion.div
+        className="absolute w-full h-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ duration: 2 }}
+      >
+        <BackgroundAnimation />
+      </motion.div>
+    </header>
+  );
+};
+
+export default Header;
