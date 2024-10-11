@@ -54,11 +54,10 @@ const Projects = () => {
       <BackgroundAnimation />
 
       <motion.h3
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 text-center"
-        initial={{ opacity: 0, y: -50 }}
+        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center"
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
-        whileHover={{ scale: 1.05, color: '#d946ef' }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         Mes Expériences Professionnelles
       </motion.h3>
@@ -66,40 +65,36 @@ const Projects = () => {
       <div className="relative flex flex-col items-center">
         <div className="absolute hidden md:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-400 z-0"></div>
 
-        <div className="space-y-12 z-10">
+        <div className="space-y-8 z-10">
           {experienceData.map((experience, index) => (
             <motion.div
               key={index}
-              className={`relative flex flex-col items-center w-full md:w-3/5 lg:w-1/2 ${
+              className={`relative flex flex-col items-start w-full md:w-3/4 lg:w-2/5 ${
                 experience.side === 'left' ? 'md:ml-auto' : 'md:mr-auto'
-              } bg-black bg-opacity-50 p-6 rounded-lg shadow-lg border border-gray-200`}
+              } bg-blue-950 p-4 rounded-md shadow-md border border-gray-200`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: '0px 0px 20px rgba(128, 90, 213, 0.7), 0px 0px 30px rgba(255, 255, 255, 0.8)',
-              }}
             >
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-start text-left">
                 {experience.logo && (
                   <img
                     src={experience.logo}
                     alt={`${experience.title} Logo`}
-                    className="w-16 h-16 md:w-20 md:h-20 object-contain mb-4"
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain mb-2"
                   />
                 )}
-                <h4 className="text-lg md:text-2xl font-semibold">{experience.title}</h4>
+                <h4 className="text-md md:text-xl font-semibold">{experience.title}</h4>
                 <p className="text-purple-300 text-sm md:text-base mt-1">{experience.descriptionShort}</p>
                 <p className="italic flex items-center mt-2">
                   <FaCalendarAlt className="mr-2 text-purple-400" /> {experience.date}
                 </p>
-                <p className="font-semibold mt-4 text-sm md:text-base">{experience.position}</p>
+                <p className="font-semibold mt-2 text-sm md:text-base">{experience.position}</p>
                 <p className="mt-4 text-xs md:text-lg font-light leading-relaxed">
                   {experience.description[0]}
                 </p>
-                <ul className="list-disc ml-6 mt-2 text-xs md:text-base">
+                <ul className="list-disc ml-4 mt-2 text-xs md:text-base">
                   {experience.description.slice(1).map((desc, idx) => (
                     <li key={idx}>{desc}</li>
                   ))}

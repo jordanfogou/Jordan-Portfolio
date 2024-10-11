@@ -66,14 +66,10 @@ const ProjectsGrid = () => {
   return (
     <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-8 text-white z-10">
       <motion.h3
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-8"
+        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        whileHover={{
-          scale: 1.05,
-          color: '#d946ef',
-        }}
       >
         Mes Projets Réalisés
       </motion.h3>
@@ -82,47 +78,35 @@ const ProjectsGrid = () => {
         {projectsData.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-black via-purple-800 to-gray-900 p-6 rounded-lg shadow-lg border-2 border-transparent"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              borderColor: 'rgba(255, 255, 255, 0.6)',
-              boxShadow: '0px 0px 20px rgba(128, 90, 213, 0.7), 0px 0px 30px rgba(255, 255, 255, 0.5)',
-            }}
+            className="bg-blue-950 p-4 rounded-md shadow-sm border border-gray-600"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             whileHover={{
-              scale: 1.08,
-              boxShadow: '0px 0px 30px rgba(128, 90, 213, 1), 0px 0px 50px rgba(255, 255, 255, 0.8)',
+              scale: 1.01,
+              boxShadow: '0px 0px 5px rgba(128, 90, 213, 0.2)', // Ombre très légère
             }}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-md mb-4"
+              className="w-full h-40 object-cover rounded-md mb-3"
             />
-            <h4 className="text-lg md:text-2xl font-semibold mb-4 text-center">{project.title}</h4>
-            <p className="text-sm md:text-base font-light leading-relaxed mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <h4 className="text-lg md:text-xl font-semibold mb-3 text-center">{project.title}</h4>
+            <p className="text-sm md:text-base font-light leading-relaxed mb-3">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-3">
               {project.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="text-xs px-2 py-1 rounded shadow-lg"
+                  className="text-xs px-2 py-1 rounded shadow"
                   style={{ color: colors[idx % colors.length] }}
                 >
                   #{tech}
                 </span>
               ))}
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-400 hover:text-indigo-300 underline"
-            >
-              Voir plus
-            </a>
+            
           </motion.div>
         ))}
       </div>

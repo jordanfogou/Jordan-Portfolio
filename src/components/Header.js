@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FaBars } from 'react-icons/fa'; // Importer l'icône de menu hamburger
 import PCModelCanvas from './PCModel';
 import BackgroundAnimation from './BackgroundAnimation';
 
@@ -29,8 +30,8 @@ const Header = () => {
         >
           Télécharger mon CV
         </a>
-        <button onClick={toggleMenu} className="sm:hidden text-white px-4 py-2 bg-blue-500 rounded-full">
-          Menu
+        <button onClick={toggleMenu} className="sm:hidden text-white p-2 bg-blue-500 rounded-full">
+          <FaBars size={20} /> {/* Icône de menu hamburger */}
         </button>
       </div>
 
@@ -73,11 +74,13 @@ const Header = () => {
           transition={{ duration: 0.6 }}
         />
 
-        <div className="w-1 h-[76.8px] sm:h-[102.4px] bg-blue-400 rounded-full mr-4"></div>
+        <div className="w-1 h-[150px] sm:h-[180px] bg-blue-400 rounded-full mr-4"></div> {/* Allongement de la barre */}
 
         <div>
           <h1 className="text-3xl md:text-5xl font-bold">
-            Salut, je suis <span className="text-purple-400">Jordan</span>
+            Salut, je suis <span className="text-blue-400">Jordan</span> {/* Changement de couleur */}
+            <br />
+            bienvenue sur mon portfolio {/* Ajout du texte supplémentaire */}
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
             Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique (réseau, cybersécurité, dev Full-stack ou autres).
