@@ -29,7 +29,7 @@ const Header = () => {
         >
           Télécharger mon CV
         </a>
-        <button onClick={toggleMenu} className="sm:hidden text-white px-4 py-2 bg-purple-500 rounded-full">
+        <button onClick={toggleMenu} className="sm:hidden text-white px-4 py-2 bg-blue-500 rounded-full">
           Menu
         </button>
       </div>
@@ -67,26 +67,26 @@ const Header = () => {
         <motion.img
           src="/profile-image.jpg"
           alt="Photo de profil"
-          className="w-32 h-32 md:w-48 md:h-48 rounded-full shadow-lg border-4 border-purple-400 mr-4"
+          className="w-32 h-32 md:w-48 md:h-48 rounded-full shadow-lg border-4 border-blue-400 mr-4"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         />
 
-        <div className="w-1 h-48 sm:h-64 bg-purple-400 rounded-full mr-4"></div>
+        <div className="w-1 h-[76.8px] sm:h-[102.4px] bg-blue-400 rounded-full mr-4"></div>
 
         <div>
           <h1 className="text-3xl md:text-5xl font-bold">
             Salut, je suis <span className="text-purple-400">Jordan</span>
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
-            Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, je suis passionné par l'administration et la sécurisation des réseaux informatiques en passant par le développement web Fullstack. Je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique.
+            Étudiant en première année du cycle ingénieur informatique (bac+3) à CESI École d'Ingénieurs sur le campus de Nanterre, Je suis actuellement à la recherche d'un stage de 15 semaines à partir de janvier 2025 dans le domaine informatique( réseau ,cybersécurité , dev Full-stack ou autres).
           </p>
         </div>
       </motion.div>
 
       {/* Modèle 3D dans la zone droite, ajusté pour être plus bas */}
-      <div className="absolute bottom-[-10px] right-4 sm:right-10 w-full sm:w-1/2 h-1/2 sm:h-3/4 z-10">
+      <div className="absolute bottom-[30px] right-4 sm:right-10 w-full sm:w-1/2 h-1/2 sm:h-3/4 z-10">
         <PCModelCanvas />
       </div>
 
