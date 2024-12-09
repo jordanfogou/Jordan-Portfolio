@@ -20,9 +20,25 @@ const Projects = () => {
       side: 'right',
     },
     {
+      title: 'ETM Telecom - Paris, Île-de-France',
+      descriptionShort: "Opérateur Télécom de nouvelle génération, spécialisé dans les solutions pour entreprises et secteur hôtelier",
+      date: 'Mai 2023 - Juillet 2023 (3 mois)',
+      position: 'Stagiaire Technicien Réseau',
+      logo: '/etmtelecom_logo.jpeg',
+      description: [
+        "Durant mon stage chez ETM Telecom, j'ai contribué activement à la conception, l'optimisation et la sécurisation d'infrastructures réseau pour des entités variées.",
+        "Analyse des besoins en réseau et mise en œuvre de configurations avancées pour garantir la qualité et la sécurité des communications.",
+        "Utilisation d'outils de diagnostic comme Cisco Packet Tracer et Wireshark pour surveiller et analyser les performances réseau.",
+        "Gestion des accès et sécurité des données via Active Directory.",
+        "Optimisation des systèmes pour assurer une communication fluide et sécurisée entre les départements.",
+      ],
+      side: 'left',
+    },
+    
+    {
       title: 'IZISOLUTIONS',
       descriptionShort: 'Agence Web Full-Stack Spécialisée dans la Transformation Digitale',
-      date: 'Mai 2023 - Juillet 2023 (3 mois)',
+      date: 'Mai 2022 - Juillet 2022 (2 mois)',
       position: 'Stagiaire développeur Full-stack',
       logo: '/izisolutionscm_logo.jpg',
       description: [
@@ -31,20 +47,6 @@ const Projects = () => {
         'Utiliser le framework Bootstrap pour concevoir une interface utilisateur réactive et moderne.',
         'Intégrer Twig comme moteur de templates pour séparer la logique métier de la présentation.',
         'Concevoir des fonctionnalités en PHP pour gérer les projets, les tâches, les utilisateurs et les communications internes.',
-      ],
-      side: 'left',
-    },
-    {
-      title: "ETS ISBE (Établissement d'ingénierie des services biomédicaux et électronique)",
-      date: 'Mai 2022 - Juin 2022 (1 mois)',
-      position: 'Stagiaire en informatique et technologie Biomédicale',
-      logo: '/ISBElogo.png',
-      description: [
-        "Durant mon stage à ETS ISBE, j'ai participé activement à la maintenance et l'optimisation de dispositifs médicaux et électroniques.",
-        'Participation à la maintenance préventive et curative des dispositifs médicaux.',
-        'Évaluation et optimisation des dispositifs IoT utilisés dans le domaine médical.',
-        "Amélioration de l'ergonomie des interfaces pour les dispositifs médicaux.",
-        'Contribution à la gestion des risques électromagnétiques des équipements.',
       ],
       side: 'right',
     },
