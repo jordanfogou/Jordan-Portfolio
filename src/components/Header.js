@@ -84,7 +84,7 @@ const Header = () => {
             Salut, je suis <span className="text-blue-400">Jordan</span> {/* Changement de couleur */}
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left">
-          Étudiant en première année du cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps(pratiques intégrant la sécurité et l'efficacité dans le développement d'applications fiables et sécurisées). je suis motivé à travailler et je recherche activement un stage de 3 à 4 mois dès janvier 2025 pour mettre en pratique et développer mes compétences dans le domaine informatique.
+          Étudiant en première année du cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps(pratiques intégrant la sécurité et l'efficacité dans le développement d'applications fiables et sécurisées). je suis motivé à travailler et je recherche activement un stage de 3 à 4 mois à pouvoir dès le 13 janvier 2025 pour mettre en pratique et développer mes compétences dans le domaine informatique.
           </p>
         </div>
       </motion.div>
