@@ -3,16 +3,6 @@ import { motion } from 'framer-motion';
 
 const skillsData = [
   {
-    title: 'Réseau et Systèmes',
-    items: [
-      { name: 'Cisco Packet Tracer', icon: '/cisco.png' },
-      { name: 'Wireshark', icon: '/wireshark.jpg' },
-      { name: 'Nmap', icon: '/nmap.jpg' },
-      { name: 'Active Directory', icon: '/active-directory.png' },
-      { name: 'TCPdump', icon: '/tcpdump.jpg' },
-    ],
-  },
-  {
     title: 'Programmation et Scripting',
     items: [
       { name: 'C#', icon: '/csharp.png' },
@@ -23,6 +13,27 @@ const skillsData = [
       { name: 'PHP', icon: '/php.png' },
     ],
   },
+  {
+    title: 'Mes Atouts',
+    items: [
+      { name: "Esprit d'équipe" },
+      { name: 'Adaptabilité' },
+      { name: 'Dynamique' },
+      { name: 'Proactivité' },
+      { name: 'Communication' },
+    ],
+  },
+  {
+    title: 'Réseau et Systèmes',
+    items: [
+      { name: 'Cisco Packet Tracer', icon: '/cisco.png' },
+      { name: 'Wireshark', icon: '/wireshark.jpg' },
+      { name: 'Nmap', icon: '/nmap.jpg' },
+      { name: 'Active Directory', icon: '/active-directory.png' },
+      { name: 'TCPdump', icon: '/tcpdump.jpg' },
+    ],
+  },
+  
   {
     title: 'Technologies et Outils',
     items: [
@@ -35,16 +46,7 @@ const skillsData = [
     ],
   },
   
-  {
-    title: 'Mes Atouts',
-    items: [
-      { name: "Esprit d'équipe" },
-      { name: 'Adaptabilité' },
-      { name: 'Dynamique' },
-      { name: 'Proactivité' },
-      { name: 'Communication' },
-    ],
-  },
+  
   {
     title: 'À propos de moi',
     items: [

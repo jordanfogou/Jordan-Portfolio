@@ -84,12 +84,7 @@ const Header = () => {
             Salut, je suis <span className="text-blue-400">Jordan</span> {/* Changement de couleur */}
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left max-w-xl">
-          Étudiant en première année du cycle ingénieur (Bac+3) en informatique à
- CESI École d'Ingénieurs, je suis passionné par le développement web et le
- DevOps. Je suis actuellement à la recherche d’un stage de 12 à 15
- semaines dans ce domaines ou autres (informatique) , à partir de janvier
- 2025, pour approfondir mes compétences et contribuer à des projets
- innovants.
+          Étudiant en première année du cycle ingénieur (Bac+3) à CESI École d'Ingénieurs, je suis passionné par le DevSecOps (pratique intégrant la sécurité au cœur des processus de développement et d'opérations pour créer des applications fiables et sécurisées). Curieux et motivé, je suis activement à la recherche d’un stage de 3 à 4 mois, à partir de janvier 2025, dans ce domaine ou tout autre domaine en informatique qui me permettra de monter en compétences et de contribuer à des projets innovants.
           </p>
         </div>
       </motion.div>

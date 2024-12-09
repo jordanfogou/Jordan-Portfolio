@@ -3,22 +3,6 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
-    title: 'Réseau & système',
-    description:
-      "Concevoir, optimiser, analyser et sécuriser l’infrastructure réseau de plusieurs entités d’une ville. Mise en œuvre de configurations avancées pour garantir la qualité et la sécurité des communications.",
-    technologies: ['Cisco PT', 'Wireshark', 'Active Directory'],
-    image: '/network_project.jpg',
-    link: '#',
-  },
-  {
-    title: 'Sécurité sous Kali Linux',
-    description:
-      "Sécurisation et analyse d'infrastructures réseau sous Linux, avec la mise en place de pare-feux, de règles de sécurité avancées et de surveillance en temps réel pour garantir la protection des données.",
-    technologies: ['Kali Linux', 'OpenSSL', 'Wireshark', 'iptables', 'Nmap'],
-    image: '/security_project.jpg',
-    link: '#',
-  },
-  {
     title: 'Développement Web',
     description:
       "Dans un groupe de 4 étudiants, j'ai participé au développement d'une application web comme Linkedin permettant de mettre en relation des entreprises et des étudiants dans le cadre des recherches de stage.",
@@ -27,11 +11,11 @@ const projectsData = [
     link: '#',
   },
   {
-    title: 'Optimisation énergétique des data centers',
+    title: 'Sécurité sous Kali Linux',
     description:
-      "Développement d'un algorithme de planification des tâches pour minimiser le nombre de serveurs actifs et la consommation d'énergie pour une entreprise.",
-    technologies: ['Python', 'NetworkX', 'Algorithmie gloutonne'],
-    image: '/energy_optimization_project.jpg',
+      "Sécurisation et analyse d'infrastructures réseau sous Linux, avec la mise en place de pare-feux, de règles de sécurité avancées et de surveillance en temps réel pour garantir la protection des données.",
+    technologies: ['Kali Linux', 'OpenSSL','Wireshark', 'iptables', 'Nmap'],
+    image: '/security_project.jpg',
     link: '#',
   },
   {
@@ -42,6 +26,24 @@ const projectsData = [
     image: '/cpp_project.jpg',
     link: '#',
   },
+  {
+    title: 'Réseau & système',
+    description:
+      "Concevoir, optimiser, analyser et sécuriser l’infrastructure réseau de plusieurs entités d’une ville. Mise en œuvre de configurations avancées pour garantir la qualité et la sécurité des communications.",
+    technologies: ['Cisco PT', 'Wireshark', 'Active Directory'],
+    image: '/network_project.jpg',
+    link: '#',
+  },
+  
+  {
+    title: 'Optimisation énergétique des data centers',
+    description:
+      "Développement d'un algorithme de planification des tâches pour minimiser le nombre de serveurs actifs et la consommation d'énergie pour une entreprise.",
+    technologies: ['Python', 'NetworkX', 'Algorithmie gloutonne'],
+    image: '/energy_optimization_project.jpg',
+    link: '#',
+  },
+  
   {
     title: 'Projet systèmes embarqués',
     description:
