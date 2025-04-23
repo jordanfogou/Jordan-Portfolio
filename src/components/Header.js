@@ -69,7 +69,7 @@ const Header = () => {
         transition={{ duration: 1 }}
       >
         <motion.img
-          src="/profile-image.jpg"
+          src="/new-profil image.jpg"
           alt="Photo de profil"
           className="w-32 h-32 md:w-48 md:h-48 rounded-full shadow-lg border-4 border-blue-400 mr-4"
           initial={{ opacity: 0, x: -50 }}
@@ -84,7 +84,7 @@ const Header = () => {
             Salut, je suis <span className="text-blue-400">Jordan</span> {/* Changement de couleur */}
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left">
-          Étudiant en première année du cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps(pratiques intégrant la sécurité et l'efficacité dans le développement d'applications fiables et sécurisées). je suis motivé à travailler et je recherche activement un stage de 3 à 4 mois à pouvoir dès le 13 janvier 2025 pour mettre en pratique et développer mes compétences dans le domaine informatique.
+         Actuellement Étudiant en cycle ingénieur (Bac+3) à CESI, je suis passionné par le DevSecOps (pratiques intégrant la sécurité et l’efficacité dans le développement d’applications fiables et sécurisées) . je recherche une Alternance de 2 ans dès septembre 2025 aux postes de dev Fullstack , Analyste Sécurité Logicielle ou tout poste similaire en région Parisienne ! Dynamique ,motivé et prêt à contribuer à des projets innovants.
           </p>
         </div>
       </motion.div>

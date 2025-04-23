@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 function PCModel() {
-  const { scene } = useGLTF('/models/scene.glb'); // Assurez-vous que le chemin est correct
+  const { scene } = useGLTF('/models/scene.glb'); 
   return <primitive object={scene} scale={0.7} />;
 }
 

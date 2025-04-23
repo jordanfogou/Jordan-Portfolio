@@ -17,16 +17,16 @@ function App() {
       <section id="experiences" className="relative z-10 px-4 sm:px-8 py-8">
         <Projects />
       </section>
+      {/* Projets Réalisés : Portfolio de projets */}
+      <section id="projects" className="relative z-10 px-4 sm:px-8 py-8">
+        <ProjectsGrid />
+      </section>
       {/* Compétences : Compétences techniques et personnelles */}
       <section id="competences" className="relative z-10 px-4 sm:px-8 py-8">
         <Skills />
       </section>
 
-      {/* Projets Réalisés : Portfolio de projets */}
-      <section id="projects" className="relative z-10 px-4 sm:px-8 py-8">
-        <ProjectsGrid />
-      </section>
-
+  
 
       {/* Contact : Formulaire de contact */}
       <section id="contact" className="relative z-10 px-4 sm:px-8 py-8">
