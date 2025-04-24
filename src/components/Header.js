@@ -94,7 +94,7 @@ const Header = () => {
             Salut, moi c’est <span className="text-blue-400">Jordan</span>
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left">
-            Actuellement étudiant en cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps, je recherche une alternance de 2 ans  ou un stage de 6 mois à pouvoir dès septembre 2025 aux postes Développement Fullstack, Sécurité logicielle ou poste similaire en région parisienne. Dynamique et motivé, je souhaite contribuer à des projets innovants.
+            Actuellement étudiant en première année du cycle ingénieur (Bac+3) à CESI, je suis passionné par le DevSecOps(pratiques intégrant la sécurité et l'efficacité dans le développement d'applications fiables et sécurisées), je recherche une alternance de 2 ans  ou un stage de 6 mois à pouvoir dès septembre 2025 aux postes Développement Fullstack, Analyste Sécurité logicielle ou tout poste similaire en région parisienne. 
           </p>
         </div>
       </motion.div>
