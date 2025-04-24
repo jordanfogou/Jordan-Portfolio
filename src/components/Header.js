@@ -94,15 +94,15 @@ const Header = () => {
             Salut, moi c’est <span className="text-blue-400">Jordan</span>
           </h1>
           <p className="text-sm md:text-lg mt-4 text-left">
-            Actuellement étudiant en cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps, je recherche une alternance de 2 ans dès septembre 2025 en Développement Fullstack, Sécurité logicielle ou poste similaire en région parisienne. Dynamique et motivé, je souhaite contribuer à des projets innovants.
+            Actuellement étudiant en cycle ingénieur (Bac+3) à CESI, passionné par le DevSecOps, je recherche une alternance de 2 ans  ou un stage de 6 mois à pouvoir dès septembre 2025 aux postes Développement Fullstack, Sécurité logicielle ou poste similaire en région parisienne. Dynamique et motivé, je souhaite contribuer à des projets innovants.
           </p>
         </div>
       </motion.div>
 
-      {/* 3D model, lowered so it doesn't cover text */}
+      {/* 3D model, relevé pour ne pas masquer le texte */}
       <div
         className="
-          absolute bottom-[-30px] right-4 sm:right-10
+          absolute bottom-[-10px] right-4 sm:right-10
           w-full sm:w-1/2 h-1/2 sm:h-3/4
           z-10
         "

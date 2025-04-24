@@ -27,7 +27,7 @@ const Projects = () => {
   const experienceData = [
     {
       title: 'MOOVIT SAS - Marseille, France',
-      date: 'Janvier 2025 - Avril 2025 (en cours actuellement)',
+      date: 'Janvier 2025 - Avril 2025 (4 mois)',
       position: 'Stagiaire Développeur en Automatisation ETL',
       logo: '/mixxit.jpg',
       description: [
