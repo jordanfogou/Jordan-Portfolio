@@ -102,7 +102,7 @@ const Header = () => {
       {/* 3D model, relevé pour ne pas masquer le texte */}
       <div
         className="
-          absolute bottom-[-10px] right-4 sm:right-10
+          absolute bottom-[80px] right-4 sm:right-10
           w-full sm:w-1/2 h-1/2 sm:h-3/4
           z-10
         "
