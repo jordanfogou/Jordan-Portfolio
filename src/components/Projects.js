@@ -26,8 +26,8 @@ const dividerVariants: Variants = {
 const Projects = () => {
   const experienceData = [
     {
-      title: 'Mixxit - Marseille, France',
-      date: 'Janvier 2025 - Avril 2025 (4 mois)',
+      title: 'MOOVIT SAS - Marseille, France',
+      date: 'Janvier 2025 - Avril 2025 (en cours actuellement)',
       position: 'Stagiaire Développeur en Automatisation ETL',
       logo: '/mixxit.jpg',
       description: [
@@ -84,7 +84,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative px-6 py-16 bg-gradient-to-br from-indigo-900 to-purple-800 text-white overflow-hidden"
+      className="relative px-6 py-16 bg-gradient-to-br from-indigo-900 to-purple-800 text-white overflow-visible"
     >
       {/* Fond animé uniforme */}
       <BackgroundAnimation />
@@ -98,71 +98,66 @@ const Projects = () => {
         Mes Expériences Professionnelles
       </motion.h3>
 
-      <div className="flex flex-col space-y-12 w-full md:w-3/4 lg:w-2/3 mx-auto">
-        {experienceData.map((exp, idx) => {
-          return (
-            <React.Fragment key={idx}>
+      <div className="flex flex-col space-y-12 w-full md:w-3/4 lg:w-2/3 mx-auto pt-8">
+        {experienceData.map((exp, idx) => (
+          <React.Fragment key={idx}>
+            <motion.div
+              custom={idx}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              whileHover="hover"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col md:flex-row bg-blue-950 p-8 rounded-3xl shadow-sm border border-gray-600 text-white transition-all duration-300"
+            >
+              <motion.img
+                src={exp.logo}
+                alt={`${exp.title} logo`}
+                className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 object-contain rounded-full bg-gradient-to-br from-blue-500 to-indigo-700 p-2 shadow-2xl mb-4 md:mb-0 md:mr-6"
+                variants={lineVariants}
+              />
+
+              <div className="flex-1">
+                <motion.h4 className="text-2xl font-bold mb-2" variants={lineVariants}>
+                  {exp.title}
+                </motion.h4>
+                <motion.div className="flex items-center text-blue-300 mb-4" variants={lineVariants}>
+                  <FaCalendarAlt className="mr-2 text-blue-400" /> {exp.date}
+                </motion.div>
+                <motion.p className="text-lg font-medium mb-6" variants={lineVariants}>
+                  {exp.position}
+                </motion.p>
+
+                <motion.ul className="list-none text-gray-200 leading-relaxed space-y-2" variants={lineVariants}>
+                  {exp.description.map((task, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="mr-3 mt-1 text-blue-400 text-lg">&#8226;</span>
+                      <span className="flex-1">{task}</span>
+                    </li>
+                  ))}
+                </motion.ul>
+              </div>
+            </motion.div>
+
+            {idx < experienceData.length - 1 && (
               <motion.div
-                custom={idx}
-                variants={cardVariants}
+                className="flex items-center justify-center my-4 overflow-hidden"
                 initial="hidden"
                 whileInView="visible"
-                whileHover="hover"
-                viewport={{ once: true, amount: 0.5 }}
-                className="bg-blue-950 p-8 rounded-3xl shadow-sm border border-gray-600 text-white transition-all duration-300"
+                variants={dividerVariants}
               >
-                <motion.img
-                  src={exp.logo}
-                  alt={`${exp.title} logo`}
-                  className="w-20 h-20 md:w-24 md:h-24 object-contain rounded-full bg-gradient-to-br from-blue-500 to-indigo-700 p-2 shadow-2xl float-left mr-6"
-                  variants={lineVariants}
-                />
-
-                <div className="overflow-hidden">
-                  <motion.h4 className="text-2xl font-bold mb-2" variants={lineVariants}>
-                    {exp.title}
-                  </motion.h4>
-                  <motion.div className="flex items-center text-blue-300 mb-4" variants={lineVariants}>
-                    <FaCalendarAlt className="mr-2 text-blue-400" /> {exp.date}
-                  </motion.div>
-                  <motion.p
-                    className="text-lg font-medium mb-6"
-                    variants={lineVariants}
-                  >
-                    {exp.position}
-                  </motion.p>
-
-                  <motion.ul className="list-none text-gray-200 leading-relaxed space-y-2" variants={lineVariants}>
-                    {exp.description.map((task, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="mr-3 mt-1 text-blue-400 text-lg">&#8226;</span>
-                        <span className="flex-1">{task}</span>
-                      </li>
-                    ))}
-                  </motion.ul>
-                </div>
-              </motion.div>
-
-              {idx < experienceData.length - 1 && (
+                <div className="w-full h-0.5 bg-blue-500" />
                 <motion.div
-                  className="flex items-center justify-center my-4 overflow-hidden"
-                  initial="hidden"
-                  whileInView="visible"
-                  variants={dividerVariants}
-                >
-                  <div className="w-full h-0.5 bg-blue-500" />
-                  <motion.div
-                    className="w-4 h-4 bg-blue-400 rounded-full mx-4"
-                    initial={{ x: 0 }}
-                    animate={{ x: ['0%', '100%'] }}
-                    transition={{ loop: Infinity, ease: 'linear', duration: 2 }}
-                  />
-                  <div className="w-full h-0.5 bg-blue-500" />
-                </motion.div>
-              )}
-            </React.Fragment>
-          );
-        })}
+                  className="w-4 h-4 bg-blue-400 rounded-full mx-4"
+                  initial={{ x: 0 }}
+                  animate={{ x: ['0%', '100%'] }}
+                  transition={{ loop: Infinity, ease: 'linear', duration: 2 }}
+                />
+                <div className="w-full h-0.5 bg-blue-500" />
+              </motion.div>
+            )}
+          </React.Fragment>
+        ))}
       </div>
     </section>
   );
