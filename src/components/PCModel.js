@@ -1,35 +1,77 @@
 // src/components/PCModel.js
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF } from '@react-three/drei';
+import { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-function PCModel({ scale }) {
-  const { scene } = useGLTF('/desktop_pc/scene.gltf');
-  const modelRef = useRef();
+const Computers = ({ isMobile }) => {
+  const computer = useGLTF("/desktop_pc/scene.gltf");
+  return (
+    <mesh>
+      <hemisphereLight intensity={3} groundColor="black" />
+      <pointLight intensity={1} />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <primitive
+        object={computer.scene}
+        scale={isMobile ? 1.2 : 2.0} // Gardé plus grand comme vous vouliez
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
+      />
+    </mesh>
+  );
+};
 
-  // Ajout de la rotation sur l'axe Y
-  useFrame(() => {
-    if (modelRef.current) {
-      modelRef.current.rotation.y += 0.01; // Ajustez la valeur pour modifier la vitesse de rotation
-    }
-  });
-
-  return <primitive ref={modelRef} object={scene} scale={scale} />;
-}
-
-export default function PCModelCanvas() {
+const ComputersCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Add a listener for the changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    //Set the initial value of the 'isMobile' state variable
+    setIsMobile(mediaQuery.matches);
+    //Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    //Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    //Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+  
   return (
     <Canvas
+      frameloop="demand"
       shadows
-      camera={{ position: [0, 3, 10], fov: 45 }} // Ajustez la position pour une vue plus haute
-      style={{ height: '100vh', width: '100%' }}
+      camera={{ position: [20, 3, 5], fov: 35 }} // FOV plus large pour voir le PC entier
+      gl={{ preserveDrawingBuffer: true }}
+      style={{ 
+        height: '100%', 
+        width: '100%',
+        overflow: 'visible' // Permet le débordement
+      }}
     >
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
       <Suspense fallback={null}>
-        <PCModel scale={0.33} /> {/* Réduit la taille à 1/3 de l'original */}
+        <OrbitControls
+          autoRotate
+          autoRotateSpeed={8} // Vitesse de rotation adaptée
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Computers isMobile={isMobile} />
       </Suspense>
-      {/* OrbitControls est absent pour empêcher toute interaction manuelle */}
+      <Preload all />
     </Canvas>
   );
-}
+};
+
+export default ComputersCanvas;

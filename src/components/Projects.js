@@ -1,163 +1,255 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { FaCalendarAlt } from 'react-icons/fa';
-import BackgroundAnimation from './BackgroundAnimation';
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.3, type: 'spring', stiffness: 60 }
-  }),
-  hover: { scale: 1.02, transition: { duration: 0.3 } }
-};
-
-const lineVariants: Variants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-};
-
-const dividerVariants: Variants = {
-  hidden: { width: 0 },
-  visible: { width: '100%', transition: { duration: 0.8, ease: 'easeInOut' } }
-};
+import { motion } from 'framer-motion';
+import { FaCalendarAlt, FaMapMarkerAlt, FaBriefcase } from 'react-icons/fa';
 
 const Projects = () => {
   const experienceData = [
     {
-      title: 'MOOVIT SAS - Marseille, France',
+      title: 'MOOVIT SAS',
+      location: 'Marseille, France',
       date: 'Janvier 2025 - Avril 2025 (4 mois)',
       position: 'Stagiaire Développeur en Automatisation ETL',
       logo: '/mixxit.jpg',
+      fallbackLogo: '🏢',
       description: [
-        "Gestion de projet technique : J’ai piloté l’intégralité du projet (de la conception à la mise en production) via Zoho Project et Zoho Sprint, démontrant mes compétences en coordination et en gestion des priorités. J’ai également rédigé la documentation technique (API, workflows, guides Deluge) pour assurer la maintenabilité et l’évolutivité de la solution.",
-        "Développement front-end et optimisation UX : J’ai implémenté et personnalisé des widgets (Zoho SalesIQ) pour fluidifier l’expérience utilisateur et adapté les templates/formulaires afin de maximiser la collecte d’informations et la conversion.",
-        "Conception et intégration d’API : J’ai déployé et implémenté une architecture d’échanges entre Zoho CRM et divers services (API REST, webhooks) en m’appuyant sur des fonctions personnalisées et du code Deluge pour automatiser la création/mise à jour et l’enrichissement en temps réel des leads.",
-        "Configuration de serveurs et déclenchement de webhooks : J’ai configuré des serveurs dédiés pour lancer et superviser automatiquement des workflows (intégration, synchronisation), tout en développant des scripts de surveillance (monitoring, logs, alertes) pour détecter et prévenir rapidement les anomalies."
+        "Gestion de projet technique : Pilotage intégral du projet via Zoho Project et Zoho Sprint, coordination et gestion des priorités.",
+        "Développement front-end et optimisation UX : Implémentation de widgets Zoho SalesIQ pour fluidifier l'expérience utilisateur.",
+        "Conception et intégration d'API : Architecture d'échanges entre Zoho CRM et services externes (API REST, webhooks).",
+        "Configuration serveurs et webhooks : Scripts de surveillance pour détecter et prévenir les anomalies."
       ],
-      side: 'left'
+      technologies: ['Zoho', 'API REST', 'Webhooks', 'JavaScript', 'Deluge']
     },
     {
-      title: 'OGMENTIS - Reims, France',
+      title: 'OGMENTIS',
+      location: 'Reims, France',
       date: 'Juillet 2024 - Septembre 2024 (3 mois)',
       position: 'Stagiaire Développeur Full-stack (.NET Core C# & React)',
       logo: '/ogmentis_logo.jpg',
+      fallbackLogo: '💻',
       description: [
-        "Au cours de mon stage chez Ogmentis, j'ai contribué au développement d'un espace administrateur SaaS en .NET Core C# et React. J'ai conçu et implémenté des fonctionnalités Back-End sécurisées, et développé une interface utilisateur intuitive.",
-        "Concevoir et développer des fonctionnalités Back-End sécurisées en .NET Core C#.",
-        "Implémenter des mesures de sécurité pour protéger les données et gérer les autorisations d'accès des utilisateurs.",
-        "Créer une interface utilisateur intuitive et moderne en React pour la visualisation 3D des produits."
+        "Développement d'un espace administrateur SaaS en .NET Core C# et React.",
+        "Conception et implémentation de fonctionnalités Back-End sécurisées.",
+        "Implémentation de mesures de sécurité pour protéger les données utilisateurs.",
+        "Création d'interface utilisateur intuitive en React pour visualisation 3D."
       ],
-      side: 'right'
+      technologies: ['.NET Core', 'C#', 'React', 'SQL Server', 'Security']
     },
     {
-      title: 'ETM Telecom - Paris, Île-de-France',
+      title: 'ETM Telecom',
+      location: 'Paris, Île-de-France',
       date: 'Mai 2023 - Juillet 2023 (3 mois)',
       position: 'Stagiaire Technicien Réseau',
       logo: '/etmtelecom_logo.jpeg',
+      fallbackLogo: '🌐',
       description: [
-        "Durant mon stage chez ETM Telecom, j'ai contribué activement à la conception, l'optimisation et la sécurisation d'infrastructures réseau pour des entités variées.",
-        "Analyse des besoins en réseau et mise en œuvre de configurations avancées pour garantir la qualité et la sécurité des communications.",
-        "Utilisation d'outils de diagnostic comme Cisco Packet Tracer et Wireshark pour surveiller et analyser les performances réseau.",
-        "Gestion des accès et sécurité des données via Active Directory.",
-        "Optimisation des systèmes pour assurer une communication fluide et sécurisée entre les départements."
+        "Conception, optimisation et sécurisation d'infrastructures réseau pour entités variées.",
+        "Analyse des besoins et configurations avancées pour communications sécurisées.",
+        "Utilisation d'outils diagnostic (Cisco Packet Tracer, Wireshark) pour surveillance réseau.",
+        "Gestion des accès et sécurité via Active Directory."
       ],
-      side: 'right'
+      technologies: ['Cisco', 'Wireshark', 'Active Directory', 'Network Security', 'VLAN']
     },
     {
-      title: 'IZISOLUTIONS - Paris, France',
+      title: 'IZISOLUTIONS',
+      location: 'Paris, France',
       date: 'Mai 2022 - Juillet 2022 (2 mois)',
       position: 'Stagiaire Développeur Full-stack',
       logo: '/izisolutionscm_logo.jpg',
+      fallbackLogo: '⚡',
       description: [
-        "Durant mon stage chez IziSolutions, j'ai eu l'opportunité de participer activement au déploiement de solutions de gestion interne, tout en contribuant à divers aspects du développement front-end et back-end.",
-        "Configurer un environnement de développement local avec les outils nécessaires (serveur local, gestionnaire de versions).",
-        "Utiliser le framework Bootstrap pour concevoir une interface utilisateur réactive et moderne.",
-        "Intégrer Twig comme moteur de templates pour séparer la logique métier de la présentation.",
-        "Concevoir des fonctionnalités en PHP pour gérer les projets, les tâches, les utilisateurs et les communications internes."
+        "Participation au déploiement de solutions de gestion interne.",
+        "Configuration d'environnement de développement local avec outils nécessaires.",
+        "Utilisation de Bootstrap pour interface utilisateur réactive et moderne.",
+        "Conception de fonctionnalités PHP pour gestion projets, tâches et communications."
       ],
-      side: 'right'
+      technologies: ['PHP', 'Bootstrap', 'Twig', 'MySQL', 'Git']
     }
   ];
 
+  // Composant d'image avec fallback
+  const CompanyLogo = ({ experience }) => {
+    const [imageError, setImageError] = React.useState(false);
+    const [imageLoaded, setImageLoaded] = React.useState(false);
+
+    return (
+      <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 relative">
+        {!imageError && !imageLoaded && (
+          <div className="loading-dev w-full h-full rounded-full" />
+        )}
+        
+        {!imageError && (
+          <img
+            src={experience.logo}
+            alt={`${experience.title} logo`}
+            className={`w-full h-full rounded-full object-cover border-2 transition-opacity duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ borderColor: 'var(--accent-primary)' }}
+            onLoad={() => setImageLoaded(true)}
+            onError={() => setImageError(true)}
+            loading="lazy"
+          />
+        )}
+        
+        {imageError && (
+          <div 
+            className="w-full h-full rounded-full flex items-center justify-center text-2xl border-2"
+            style={{ 
+              background: 'var(--bg-card)', 
+              borderColor: 'var(--accent-primary)' 
+            }}
+          >
+            {experience.fallbackLogo}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { 
+        delay: i * 0.2, 
+        type: 'spring', 
+        stiffness: 100,
+        damping: 15
+      }
+    })
+  };
+
   return (
-    <section
-      id="projects"
-      className="relative px-6 py-16 bg-gradient-to-br from-indigo-900 to-purple-800 text-white overflow-visible"
-    >
-      {/* Fond animé uniforme */}
-      <BackgroundAnimation />
+    // CHANGEMENT ICI : Utiliser section-unified au lieu du fond violet
+    <section className="section-unified">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* En-tête style terminal */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="text-dev-sm mb-4" style={{ color: 'var(--text-muted)' }}>
+            <span style={{ color: 'var(--accent-primary)' }}>cat</span> experience.log
+          </div>
+          <h3 className="title-dev text-dev-xl mb-4">
+            Mes Expériences Professionnelles
+          </h3>
+          <p className="text-dev-md max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+            <span style={{ color: 'var(--text-muted)' }}>/* </span>
+            Parcours professionnel et stages réalisés
+            <span style={{ color: 'var(--text-muted)' }}> */</span>
+          </p>
+        </motion.div>
 
-      <motion.h3
-        className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Mes Expériences Professionnelles
-      </motion.h3>
-
-      <div className="flex flex-col space-y-12 w-full md:w-3/4 lg:w-2/3 mx-auto pt-8">
-        {experienceData.map((exp, idx) => (
-          <React.Fragment key={idx}>
+        {/* Timeline des expériences */}
+        <div className="space-y-8">
+          {experienceData.map((exp, idx) => (
             <motion.div
+              key={idx}
               custom={idx}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, amount: 0.5 }}
-              className="flex flex-col md:flex-row bg-blue-950 p-8 rounded-3xl shadow-sm border border-gray-600 text-white transition-all duration-300"
+              viewport={{ once: true, amount: 0.3 }}
+              className="card-dev"
             >
-              <motion.img
-                src={exp.logo}
-                alt={`${exp.title} logo`}
-                className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 object-contain rounded-full bg-gradient-to-br from-blue-500 to-indigo-700 p-2 shadow-2xl mb-4 md:mb-0 md:mr-6"
-                variants={lineVariants}
-              />
+              <div className="flex flex-col md:flex-row gap-6">
+                
+                {/* Logo de l'entreprise */}
+                <CompanyLogo experience={exp} />
 
-              <div className="flex-1">
-                <motion.h4 className="text-2xl font-bold mb-2" variants={lineVariants}>
-                  {exp.title}
-                </motion.h4>
-                <motion.div className="flex items-center text-blue-300 mb-4" variants={lineVariants}>
-                  <FaCalendarAlt className="mr-2 text-blue-400" /> {exp.date}
-                </motion.div>
-                <motion.p className="text-lg font-medium mb-6" variants={lineVariants}>
-                  {exp.position}
-                </motion.p>
+                {/* Contenu principal */}
+                <div className="flex-1 space-y-4">
+                  
+                  {/* En-tête de l'expérience */}
+                  <div className="space-y-2">
+                    <h4 className="title-dev text-dev-lg">
+                      {exp.title}
+                    </h4>
+                    
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-dev-sm">
+                      <div className="flex items-center" style={{ color: 'var(--accent-primary)' }}>
+                        <FaMapMarkerAlt className="mr-2" />
+                        {exp.location}
+                      </div>
+                      <div className="flex items-center" style={{ color: 'var(--text-muted)' }}>
+                        <FaCalendarAlt className="mr-2" />
+                        {exp.date}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center text-dev-md" style={{ color: 'var(--accent-secondary)' }}>
+                      <FaBriefcase className="mr-2" />
+                      {exp.position}
+                    </div>
+                  </div>
 
-                <motion.ul className="list-none text-gray-200 leading-relaxed space-y-2" variants={lineVariants}>
-                  {exp.description.map((task, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="mr-3 mt-1 text-blue-400 text-lg">&#8226;</span>
-                      <span className="flex-1">{task}</span>
-                    </li>
-                  ))}
-                </motion.ul>
+                  {/* Description des tâches */}
+                  <div className="space-y-3">
+                    <div className="text-dev-sm" style={{ color: 'var(--accent-primary)' }}>
+                      // Missions réalisées :
+                    </div>
+                    <ul className="space-y-2">
+                      {exp.description.map((task, i) => (
+                        <motion.li 
+                          key={i} 
+                          className="flex items-start text-dev-sm"
+                          style={{ color: 'var(--text-secondary)' }}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.1 + i * 0.1 }}
+                        >
+                          <span 
+                            className="mr-3 mt-1 text-dev-sm"
+                            style={{ color: 'var(--accent-primary)' }}
+                          >
+                            →
+                          </span>
+                          <span className="flex-1 leading-relaxed">{task}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Technologies utilisées */}
+                  <div className="space-y-3">
+                    <div className="text-dev-sm" style={{ color: 'var(--accent-primary)' }}>
+                      // Stack technique :
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech, techIdx) => (
+                        <motion.span
+                          key={tech}
+                          className="tech-badge"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: idx * 0.1 + techIdx * 0.05 }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
+          ))}
+        </div>
 
-            {idx < experienceData.length - 1 && (
-              <motion.div
-                className="flex items-center justify-center my-4 overflow-hidden"
-                initial="hidden"
-                whileInView="visible"
-                variants={dividerVariants}
-              >
-                <div className="w-full h-0.5 bg-blue-500" />
-                <motion.div
-                  className="w-4 h-4 bg-blue-400 rounded-full mx-4"
-                  initial={{ x: 0 }}
-                  animate={{ x: ['0%', '100%'] }}
-                  transition={{ loop: Infinity, ease: 'linear', duration: 2 }}
-                />
-                <div className="w-full h-0.5 bg-blue-500" />
-              </motion.div>
-            )}
-          </React.Fragment>
-        ))}
+        {/* Ligne de fin */}
+        <motion.div
+          className="text-center mt-12 text-dev-sm"
+          style={{ color: 'var(--text-muted)' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <span style={{ color: 'var(--accent-primary)' }}>EOF</span> - End of experience log
+        </motion.div>
       </div>
     </section>
   );
