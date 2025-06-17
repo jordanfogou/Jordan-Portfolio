@@ -191,23 +191,18 @@ const ProjectsGrid = () => {
     <section className="section-unified">
       <div className="max-w-7xl mx-auto">
         
-        {/* En-tête style terminal */}
+        {/* En-tête professionnel */}
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-dev-sm mb-4" style={{ color: 'var(--text-muted)' }}>
-            <span style={{ color: 'var(--accent-primary)' }}>ls</span> projects/
-          </div>
           <h3 className="title-dev text-dev-xl mb-4">
             Mes Projets Réalisés
           </h3>
           <p className="text-dev-md max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            <span style={{ color: 'var(--text-muted)' }}>/* </span>
             Découvrez mes réalisations techniques et créatives à travers différents domaines
-            <span style={{ color: 'var(--text-muted)' }}> */</span>
           </p>
         </motion.div>
 
@@ -235,7 +230,7 @@ const ProjectsGrid = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              ./{category.toLowerCase()}
+              {category}
             </motion.button>
           ))}
         </motion.div>
@@ -346,7 +341,7 @@ const ProjectsGrid = () => {
                       }}
                       className="flex-1 btn-dev text-dev-xs"
                     >
-                      ./view_details.sh
+                      Voir les détails
                     </button>
                     
                     {project.link !== '#' && (
@@ -417,8 +412,8 @@ const ProjectsGrid = () => {
 
                 {/* Description complète */}
                 <div className="mb-6">
-                  <h4 className="text-dev-md mb-3" style={{ color: 'var(--accent-primary)' }}>
-                    // Description détaillée
+                  <h4 className="text-dev-md mb-3 font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                    Description détaillée
                   </h4>
                   <p className="text-dev-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     {selectedProject.fullDescription}
@@ -427,8 +422,8 @@ const ProjectsGrid = () => {
 
                 {/* Technologies complètes */}
                 <div className="mb-6">
-                  <h4 className="text-dev-md mb-3" style={{ color: 'var(--accent-primary)' }}>
-                    // Technologies utilisées
+                  <h4 className="text-dev-md mb-3 font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                    Technologies utilisées
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech, idx) => (
@@ -457,7 +452,7 @@ const ProjectsGrid = () => {
                       className="btn-dev text-dev-sm"
                     >
                       <FaExternalLinkAlt className="inline mr-2" />
-                      ./open_project.sh
+                      Voir le projet
                     </a>
                   </div>
                 )}

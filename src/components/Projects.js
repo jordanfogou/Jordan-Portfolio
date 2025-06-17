@@ -121,27 +121,21 @@ const Projects = () => {
   };
 
   return (
-    // CHANGEMENT ICI : Utiliser section-unified au lieu du fond violet
     <section className="section-unified">
       <div className="max-w-6xl mx-auto">
         
-        {/* En-tête style terminal */}
+        {/* En-tête professionnel */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-dev-sm mb-4" style={{ color: 'var(--text-muted)' }}>
-            <span style={{ color: 'var(--accent-primary)' }}>cat</span> experience.log
-          </div>
           <h3 className="title-dev text-dev-xl mb-4">
             Mes Expériences Professionnelles
           </h3>
           <p className="text-dev-md max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            <span style={{ color: 'var(--text-muted)' }}>/* </span>
             Parcours professionnel et stages réalisés
-            <span style={{ color: 'var(--text-muted)' }}> */</span>
           </p>
         </motion.div>
 
@@ -190,8 +184,8 @@ const Projects = () => {
 
                   {/* Description des tâches */}
                   <div className="space-y-3">
-                    <div className="text-dev-sm" style={{ color: 'var(--accent-primary)' }}>
-                      // Missions réalisées :
+                    <div className="text-dev-sm font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                      Missions réalisées :
                     </div>
                     <ul className="space-y-2">
                       {exp.description.map((task, i) => (
@@ -207,7 +201,7 @@ const Projects = () => {
                             className="mr-3 mt-1 text-dev-sm"
                             style={{ color: 'var(--accent-primary)' }}
                           >
-                            →
+                            •
                           </span>
                           <span className="flex-1 leading-relaxed">{task}</span>
                         </motion.li>
@@ -217,8 +211,8 @@ const Projects = () => {
 
                   {/* Technologies utilisées */}
                   <div className="space-y-3">
-                    <div className="text-dev-sm" style={{ color: 'var(--accent-primary)' }}>
-                      // Stack technique :
+                    <div className="text-dev-sm font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                      Technologies utilisées :
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIdx) => (
@@ -239,17 +233,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Ligne de fin */}
-        <motion.div
-          className="text-center mt-12 text-dev-sm"
-          style={{ color: 'var(--text-muted)' }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          <span style={{ color: 'var(--accent-primary)' }}>EOF</span> - End of experience log
-        </motion.div>
       </div>
     </section>
   );

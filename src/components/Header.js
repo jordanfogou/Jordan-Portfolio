@@ -70,7 +70,7 @@ const Header = () => {
               variants={fadeIn("right", "spring", 0.1, 0.6)}
             >
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <FaUser className="text-white text-lg" />
+                <span className="text-white font-bold text-lg">J</span>
               </div>
               <div className="text-lg font-bold">
                 <span style={{ color: 'var(--accent-primary)' }}>Jordan FOGOU</span>
@@ -111,7 +111,7 @@ const Header = () => {
               transition={{ delay: 0.6 }}
             >
               <FaDownload className="mr-2" />
-              download_cv
+              télécharger mon cv
             </motion.a>
 
             {/* Menu mobile */}
@@ -159,7 +159,7 @@ const Header = () => {
                   onClick={toggleMenu}
                 >
                   <FaDownload className="inline mr-2" />
-                  download_cv
+                  télécharger mon cv
                 </a>
               </div>
             </motion.div>
@@ -167,192 +167,194 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Contenu principal */}
-      <div className="flex-1 relative px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="max-w-7xl mx-auto h-full flex items-center min-h-[calc(100vh-80px)]">
-          <div className="w-full">
-            
-            {/* Layout principal */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start overflow-visible">
-              
-              {/* Colonne gauche : Photo + Contenu textuel */}
-              <div className="space-y-8 -mt-8 lg:-mt-16 lg:-ml-8">
-                
-                {/* Photo de profil */}
-                <motion.div 
-                  className="flex justify-center lg:justify-start"
-                  initial="hidden"
-                  animate="show"
-                  variants={fadeIn("right", "spring", 0.2, 0.8)}
+      {/* Contenu principal - Layout reorganisé */}
+      <div className="flex-1 relative px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="max-w-7xl mx-auto h-full flex flex-col justify-center min-h-[calc(100vh-80px)]">
+          
+          {/* Photo de profil en haut - Plus petite */}
+          <motion.div 
+            className="flex justify-center mb-8 lg:mb-12"
+            initial="hidden"
+            animate="show"
+            variants={fadeIn("down", "spring", 0.2, 0.8)}
+          >
+            <div className="relative">
+              <div 
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full border-4 p-2 shadow-2xl"
+                style={{ 
+                  borderColor: 'var(--accent-primary)',
+                  background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))'
+                }}
+              >
+                <img
+                  src="/new-profil image.jpg"
+                  alt="Jordan FOGOU"
+                  className="w-full h-full rounded-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div 
+                  className="w-full h-full rounded-full bg-card flex items-center justify-center hidden"
+                  style={{ background: 'var(--bg-card)' }}
                 >
-                  <div className="relative">
-                    <div 
-                      className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full border-4 p-1 shadow-2xl"
-                      style={{ borderColor: 'var(--accent-primary)' }}
-                    >
-                      <img
-                        src="/new-profil image.jpg"
-                        alt="Jordan FOGOU"
-                        className="w-full h-full rounded-full object-cover"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div 
-                        className="w-full h-full rounded-full bg-card flex items-center justify-center hidden"
-                        style={{ background: 'var(--bg-card)' }}
-                      >
-                        <FaUser size={60} style={{ color: 'var(--accent-primary)' }} />
-                      </div>
-                    </div>
-                    {/* Indicateur en ligne */}
-                    <div 
-                      className="absolute -bottom-4 -right-4 w-8 h-8 rounded-full border-4 flex items-center justify-center"
-                      style={{ 
-                        background: 'var(--accent-tertiary)', 
-                        borderColor: 'var(--bg-primary)' 
-                      }}
-                      title="Disponible pour opportunités"
-                    />
-                  </div>
-                </motion.div>
-
-                {/* Contenu textuel principal */}
-                <div className="text-center lg:text-left">
-                  
-                  {/* Titre principal */}
-                  <motion.h1 
-                    className="title-dev text-dev-xl mb-6"
-                    initial="hidden"
-                    animate="show"
-                    variants={textVariant(0.3)}
-                  >
-                    <span className="block text-white">salut, moi c'est</span>
-                    <span 
-                      className="block"
-                      style={{ color: 'var(--accent-primary)' }}
-                    >
-                      jordan
-                    </span>
-                  </motion.h1>
-
-                  {/* Sous-titre */}
-                  <motion.h2
-                    className="text-dev-lg font-semibold mb-8"
-                    style={{ color: 'var(--accent-secondary)' }}
-                    initial="hidden"
-                    animate="show"
-                    variants={fadeIn("", "", 0.5, 1)}
-                  >
-                    développeur full-stack & devsecops
-                  </motion.h2>
-
-                  {/* Description détaillée */}
-                  <motion.div 
-                    className="text-dev-md leading-relaxed mb-8 space-y-4"
-                    style={{ color: 'var(--text-secondary)' }}
-                    initial="hidden"
-                    animate="show"
-                    variants={fadeIn("", "", 0.7, 1)}
-                  >
-                    <p>
-                      étudiant ingénieur cesi (bac+3) passionné par le devsecops et les technologies modernes. 
-                      je recherche une <strong style={{ color: 'var(--accent-primary)' }}>alternance de 2 ans</strong> ou un 
-                      <strong style={{ color: 'var(--accent-primary)' }}> stage de 6 mois</strong> dès septembre 2025 
-                      en région parisienne.
-                    </p>
-                    <p className="text-dev-sm">
-                      motivé par l'innovation et la sécurité, je souhaite contribuer à des projets 
-                      stimulants tout en développant mes compétences dans un environnement dynamique.
-                    </p>
-                  </motion.div>
-
-                  {/* Informations de localisation */}
-                  <motion.div
-                    className="flex items-center justify-center lg:justify-start space-x-6 text-dev-sm"
-                    style={{ color: 'var(--text-muted)' }}
-                    initial="hidden"
-                    animate="show"
-                    variants={fadeIn("", "", 0.9, 1)}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <span>📍</span>
-                      <span>île-de-france, france</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div 
-                        className="w-3 h-3 rounded-full animate-pulse"
-                        style={{ background: 'var(--accent-tertiary)' }}
-                      />
-                      <span style={{ color: 'var(--accent-tertiary)' }}>disponible</span>
-                    </div>
-                  </motion.div>
+                  <FaUser size={40} style={{ color: 'var(--accent-primary)' }} />
                 </div>
               </div>
-
-              {/* Colonne droite : Animation 3D */}
-              <div className="relative overflow-visible">
-                {!isMobile && show3D ? (
-                  <motion.div 
-                    className="fixed top-0 left-0 pointer-events-none z-50"
-                    style={{ 
-                      width: '100vw',
-                      height: '100vh',
-                      overflow: 'visible'
-                    }}
-                    initial="hidden"
-                    animate="show"
-                    variants={fadeIn("left", "", 1.2, 1)}
-                  >
-                    <div style={{ 
-                      position: 'absolute',
-                      top: '0',
-                      left: '50%',
-                      width: '50vw',
-                      height: '100vh',
-                      overflow: 'visible'
-                    }}>
-                      <Suspense fallback={null}>
-                        <PCModelCanvas />
-                      </Suspense>
-                    </div>
-                  </motion.div>
-                ) : isMobile ? (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <motion.div 
-                      className="text-center space-y-6"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
-                    >
-                      <motion.div
-                        className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full flex items-center justify-center shadow-xl"
-                        style={{ background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))' }}
-                        animate={{ 
-                          rotateY: [0, 360],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          rotateY: { duration: 4, repeat: Infinity, ease: "linear" },
-                          scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                      >
-                        <FaLaptopCode size={40} color="white" />
-                      </motion.div>
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>
-                          innovation & code
-                        </h3>
-                        <p className="text-base" style={{ color: 'var(--text-muted)' }}>
-                          développement moderne et sécurisé
-                        </p>
-                      </div>
-                    </motion.div>
-                  </div>
-                ) : null}
-              </div>
+              {/* Indicateur violet */}
+              <div 
+                className="absolute top-4 right-2 w-5 h-5 rounded-full border-4"
+                style={{ 
+                  background: 'var(--accent-secondary)', 
+                  borderColor: 'var(--bg-primary)' 
+                }}
+                title="Disponible pour opportunités"
+              />
             </div>
+          </motion.div>
+
+          {/* Layout principal : Texte étalé sur la largeur + PC 3D en bas à droite */}
+          <div className="flex-1 relative">
+            
+            {/* Contenu textuel - De gauche à droite sur toute la largeur */}
+            <div className="text-center lg:text-left relative z-10 space-y-8 mb-12">
+              
+              {/* Titre principal - Largeur complète */}
+              <motion.div
+                initial="hidden"
+                animate="show"
+                variants={textVariant(0.4)}
+                className="w-full"
+              >
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+                  Bonjour, Je suis{' '}
+                  <span 
+                    className="lg:inline"
+                    style={{ color: 'var(--accent-primary)' }}
+                  >
+                    Jordan
+                  </span>
+                </h1>
+                
+                {/* Sous-titre sur toute la largeur */}
+                <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8" style={{ color: 'var(--accent-secondary)' }}>
+                  Développeur Full-Stack & DevSecOps
+                </h2>
+              </motion.div>
+
+              {/* Description principale - Étalée sur la largeur */}
+              <motion.div 
+                className="text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed space-y-6 max-w-none"
+                style={{ color: 'var(--text-secondary)' }}
+                initial="hidden"
+                animate="show"
+                variants={fadeIn("right", "", 0.6, 1)}
+              >
+                <p className="w-full">
+                  Actuellement étudiant ingénieur Bac+4 à <strong style={{ color: 'var(--accent-primary)' }}>CESI</strong>, 
+                  je suis passionné et par le DevSecOps(Pratiques intégrant la sécurité et l'éfficacité dans le développement d'applications fiable et sécurisées.) <strong style={{ color: 'var(--accent-primary)' }}></strong> pour 
+                  mon année académique prochaine, je recherche une alternance de 24 mois pour mettre en pratique mes compétences et en apprendre de nouvelles  au sein d'une entreprise dynamique, humaine ,  avec des missions qui répondent à un réel besoin au poste de developpeur {' '}
+                  <strong style={{ color: 'var(--accent-primary)' }}>Full-stack</strong>.
+                </p>
+              </motion.div>
+
+              
+
+              {/* Call to Action - Sur toute la largeur */}
+              <motion.div
+                className="flex flex-wrap gap-6 justify-center lg:justify-start pt-8 w-full"
+                initial="hidden"
+                animate="show"
+                variants={fadeIn("right", "", 1.0, 1)}
+              >
+                <a
+                  href="#contact"
+                  className="btn-dev text-dev-sm px-8 py-4 text-center"
+                >
+                  📍Île-de-France, France
+                </a>
+                <a
+                  href="#projects"
+                  className="border border-primary px-8 py-4 rounded-lg text-center transition-all hover:bg-primary/10"
+                  style={{ 
+                    borderColor: 'var(--accent-primary)', 
+                    color: 'var(--accent-primary)' 
+                  }}
+                >
+                  Rythme 2 semaines/2semaines
+                </a>
+                <a
+                  href="/CV_Jordan_Fogou_D.pdf"
+                  download
+                  className="border border-secondary px-8 py-4 rounded-lg text-center transition-all hover:bg-secondary/10"
+                  style={{ 
+                    borderColor: 'var(--accent-secondary)', 
+                    color: 'var(--accent-secondary)' 
+                  }}
+                >
+                  Disponible pour alternance de 24 mois
+                </a>
+              </motion.div>
+            </div>
+
+            {/* PC 3D - Positionné en bas à droite de façon absolue */}
+            <div className="hidden lg:block absolute bottom-0 right-0 w-1/3 h-96">
+              {!isMobile && show3D ? (
+                <motion.div 
+                  className="w-full h-full relative"
+                  initial="hidden"
+                  animate="show"
+                  variants={fadeIn("left", "", 1.2, 1)}
+                >
+                  <Suspense fallback={
+                    <div className="w-full h-full flex items-center justify-center text-white">
+                      <div className="text-center">
+                        <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                        <span className="text-dev-sm">Chargement...</span>
+                      </div>
+                    </div>
+                  }>
+                    <PCModelCanvas />
+                  </Suspense>
+                </motion.div>
+              ) : null}
+            </div>
+
+            {/* Version mobile du PC 3D */}
+            {isMobile && (
+              <div className="w-full h-64 flex items-center justify-center mt-8">
+                <motion.div 
+                  className="text-center space-y-4"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <motion.div
+                    className="w-20 h-20 mx-auto rounded-full flex items-center justify-center shadow-xl"
+                    style={{ background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))' }}
+                    animate={{ 
+                      rotateY: [0, 360],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      rotateY: { duration: 4, repeat: Infinity, ease: "linear" },
+                      scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                  >
+                    <FaLaptopCode size={32} color="white" />
+                  </motion.div>
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
+                      Innovation & Code
+                    </h3>
+                    <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                      Développement moderne
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            )}
           </div>
         </div>
       </div>

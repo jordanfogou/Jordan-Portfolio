@@ -10,7 +10,7 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity={3} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
+        position={[-20, 20, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1}
@@ -19,8 +19,8 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.2 : 2.0} // Gardé plus grand comme vous vouliez
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.4 : 1.2} // Encore plus réduit : 0.4/0.6 au lieu de 0.8/1.3
+        position={isMobile ? [0, -2, -1] : [0, -2.5, -1]} // Position plus proche et centrée
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -32,7 +32,7 @@ const ComputersCanvas = () => {
   
   useEffect(() => {
     // Add a listener for the changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 800px)");
     //Set the initial value of the 'isMobile' state variable
     setIsMobile(mediaQuery.matches);
     //Define a callback function to handle changes to the media query
@@ -51,18 +51,17 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fov: 35 }} // FOV plus large pour voir le PC entier
+      camera={{ position: [12, 3, 5], fov: 90 }} // FOV réduit de 35 à 25 pour mieux encadrer
       gl={{ preserveDrawingBuffer: true }}
       style={{ 
         height: '100%', 
-        width: '100%',
-        overflow: 'visible' // Permet le débordement
+        width: '100%'
       }}
     >
       <Suspense fallback={null}>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={8} // Vitesse de rotation adaptée
+          autoRotateSpeed={12} // Réduit de 8 à 6 pour rotation plus douce
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

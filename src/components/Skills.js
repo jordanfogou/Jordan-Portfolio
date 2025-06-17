@@ -157,7 +157,7 @@ const Skills = () => {
     <section className="section-unified">
       <div className="max-w-6xl mx-auto">
         
-        {/* En-tête */}
+        {/* En-tête professionnel */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}

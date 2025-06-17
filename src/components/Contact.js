@@ -1,4 +1,4 @@
-// src/components/Contact.js - Version adaptée au système CSS unifié
+// src/components/Contact.js - Version professionnelle nettoyée
 import React, { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Html } from '@react-three/drei';
@@ -29,7 +29,7 @@ const Loader3D = () => {
           className="w-8 h-8 border-4 border-t-transparent rounded-full animate-spin mb-2"
           style={{ borderColor: 'var(--accent-primary)', borderTopColor: 'transparent' }}
         />
-        <span className="text-white text-sm">loading 3d model...</span>
+        <span className="text-white text-sm">Chargement du modèle 3D...</span>
       </div>
     </Html>
   );
@@ -50,13 +50,13 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          alert('votre message a été envoyé avec succès.');
+          alert('Votre message a été envoyé avec succès.');
           if (form.current) {
             form.current.reset();
           }
         },
         (error) => {
-          alert("une erreur est survenue lors de l'envoi de votre message.");
+          alert("Une erreur est survenue lors de l'envoi de votre message.");
         }
       );
   };
@@ -65,23 +65,18 @@ const Contact = () => {
     <section className="section-unified" id="contact">
       <div className="max-w-7xl mx-auto">
         
-        {/* En-tête style terminal */}
+        {/* En-tête professionnel */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-dev-sm mb-4" style={{ color: 'var(--text-muted)' }}>
-            <span style={{ color: 'var(--accent-primary)' }}>./contact</span> --init
-          </div>
           <h3 className="title-dev text-dev-xl mb-4">
-            contactez-moi
+            Contactez-moi
           </h3>
           <p className="text-dev-md max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            <span style={{ color: 'var(--text-muted)' }}>/* </span>
-            prêt à collaborer ? parlons de votre projet !
-            <span style={{ color: 'var(--text-muted)' }}> */</span>
+            Prêt à collaborer ? Parlons de votre projet !
           </p>
         </motion.div>
 
@@ -116,22 +111,22 @@ const Contact = () => {
             <div className="card-dev form-dev">
               <div className="text-center mb-6">
                 <h4 className="title-dev text-dev-lg mb-2">
-                  envoyez-moi un message
+                  Envoyez-moi un message
                 </h4>
                 <p className="text-dev-sm" style={{ color: 'var(--text-secondary)' }}>
-                  je suis disponible pour échanger et ouvert à vos offres.
+                  Je suis disponible pour échanger et ouvert à vos offres.
                 </p>
               </div>
               
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div>
                   <label className="block text-dev-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
-                    votre nom
+                    Votre nom
                   </label>
                   <input
                     type="text"
                     name="from_name"
-                    placeholder="quel est votre nom ?"
+                    placeholder="Quel est votre nom ?"
                     className="input-dev"
                     required
                   />
@@ -139,12 +134,12 @@ const Contact = () => {
                 
                 <div>
                   <label className="block text-dev-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
-                    votre email
+                    Votre email
                   </label>
                   <input
                     type="email"
                     name="sender"
-                    placeholder="quelle est votre adresse ?"
+                    placeholder="Quelle est votre adresse ?"
                     className="input-dev"
                     required
                   />
@@ -152,11 +147,11 @@ const Contact = () => {
                 
                 <div>
                   <label className="block text-dev-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
-                    votre message
+                    Votre message
                   </label>
                   <textarea
                     name="message"
-                    placeholder="votre message..."
+                    placeholder="Votre message..."
                     className="input-dev resize-none"
                     rows="4"
                     required
@@ -168,7 +163,7 @@ const Contact = () => {
                   className="w-full btn-dev text-dev-sm flex items-center justify-center"
                 >
                   <FaPaperPlane className="mr-2" />
-                  ./send_message.sh
+                  Envoyer le message
                 </button>
               </form>
 
@@ -176,7 +171,7 @@ const Contact = () => {
               <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border-secondary)' }}>
                 <div className="text-center">
                   <h5 className="text-dev-sm font-semibold mb-4" style={{ color: 'var(--accent-primary)' }}>
-                    // informations de contact
+                    Informations de contact
                   </h5>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center space-x-3 text-dev-sm" style={{ color: 'var(--text-secondary)' }}>
@@ -189,7 +184,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center justify-center space-x-3 text-dev-sm" style={{ color: 'var(--text-secondary)' }}>
                       <FaMapMarkerAlt style={{ color: 'var(--accent-primary)' }} />
-                      <span>île-de-france, france</span>
+                      <span>Île-de-France, France</span>
                     </div>
                   </div>
                 </div>
@@ -206,7 +201,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <span style={{ color: 'var(--accent-primary)' }}>// eof</span> - merci de votre visite !
+          Merci de votre visite !
         </motion.div>
       </div>
     </section>
