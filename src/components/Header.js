@@ -49,11 +49,9 @@ const Header = () => {
 
   // Démarrer le chargement 3D après un délai
   useEffect(() => {
-    if (!isMobile) {
-      const timer = setTimeout(() => setShow3D(true), 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile]);
+    const timer = setTimeout(() => setShow3D(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <header className="section-unified min-h-screen relative">
@@ -103,7 +101,7 @@ const Header = () => {
 
             {/* Bouton CV */}
             <motion.a
-              href="/CV_Jordan_Fogou_D.pdf"
+              href="/CV jordan_FOGOU_alternant_DEVFULLSTACK.pdf"
               download
               className="hidden lg:flex items-center btn-dev text-dev-sm"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -153,7 +151,7 @@ const Header = () => {
                 ))}
                 
                 <a
-                  href="/CV_Jordan_Fogou_D.pdf"
+                  href="/CV jordan_FOGOU_alternant_DEVFULLSTACK.pdf"
                   download
                   className="btn-dev block text-center mt-4 text-dev-sm"
                   onClick={toggleMenu}
@@ -180,7 +178,7 @@ const Header = () => {
           >
             <div className="relative">
               <div 
-                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full border-4 p-2 shadow-2xl"
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full border-2 p-2 shadow-2xl" // ← border-2
                 style={{ 
                   borderColor: 'var(--accent-primary)',
                   background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))'
@@ -202,15 +200,15 @@ const Header = () => {
                   <FaUser size={40} style={{ color: 'var(--accent-primary)' }} />
                 </div>
               </div>
-              {/* Indicateur violet */}
-              <div 
-                className="absolute top-4 right-2 w-5 h-5 rounded-full border-4"
-                style={{ 
-                  background: 'var(--accent-secondary)', 
-                  borderColor: 'var(--bg-primary)' 
-                }}
-                title="Disponible pour opportunités"
-              />
+              {/* Indicateur vert */}
+<div 
+  className="absolute top-4 right-2 w-5 h-5 rounded-full border-4"
+  style={{ 
+    background: '#10b981', // ← VERT au lieu de var(--accent-secondary)
+    borderColor: 'var(--bg-primary)' 
+  }}
+  title="Disponible pour opportunités"
+/>
             </div>
           </motion.div>
 
@@ -228,7 +226,7 @@ const Header = () => {
                 className="w-full"
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-                  Bonjour, Je suis{' '}
+                 Bienvenue sur le portfolio de  {' '}
                   <span 
                     className="lg:inline"
                     style={{ color: 'var(--accent-primary)' }}
@@ -259,8 +257,6 @@ const Header = () => {
                 </p>
               </motion.div>
 
-              
-
               {/* Call to Action - Sur toute la largeur */}
               <motion.div
                 className="flex flex-wrap gap-6 justify-center lg:justify-start pt-8 w-full"
@@ -285,7 +281,7 @@ const Header = () => {
                   Rythme 2 semaines/2semaines
                 </a>
                 <a
-                  href="/CV_Jordan_Fogou_D.pdf"
+                  href="/CV jordan FOGOU alternant DEV FULLSTACK.pdf"
                   download
                   className="border border-secondary px-8 py-4 rounded-lg text-center transition-all hover:bg-secondary/10"
                   style={{ 
@@ -298,9 +294,9 @@ const Header = () => {
               </motion.div>
             </div>
 
-            {/* PC 3D - Positionné en bas à droite de façon absolue */}
+            {/* PC 3D - Positionné en bas à droite sur desktop */}
             <div className="hidden lg:block absolute bottom-0 right-0 w-1/3 h-96">
-              {!isMobile && show3D ? (
+              {show3D ? (
                 <motion.div 
                   className="w-full h-full relative"
                   initial="hidden"
@@ -321,38 +317,35 @@ const Header = () => {
               ) : null}
             </div>
 
-            {/* Version mobile du PC 3D */}
+            {/* PC 3D mobile - Version mobile */}
             {isMobile && (
               <div className="w-full h-64 flex items-center justify-center mt-8">
-                <motion.div 
-                  className="text-center space-y-4"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  <motion.div
-                    className="w-20 h-20 mx-auto rounded-full flex items-center justify-center shadow-xl"
-                    style={{ background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))' }}
-                    animate={{ 
-                      rotateY: [0, 360],
-                      scale: [1, 1.1, 1]
-                    }}
-                    transition={{ 
-                      rotateY: { duration: 4, repeat: Infinity, ease: "linear" },
-                      scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                    }}
+                {show3D ? (
+                  <motion.div 
+                    className="w-full h-full relative"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
                   >
-                    <FaLaptopCode size={32} color="white" />
+                    <Suspense fallback={
+                      <div className="w-full h-full flex items-center justify-center text-white">
+                        <div className="text-center">
+                          <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                          <span className="text-dev-sm">Chargement...</span>
+                        </div>
+                      </div>
+                    }>
+                      <PCModelCanvas />
+                    </Suspense>
                   </motion.div>
-                  <div className="space-y-1">
-                    <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
-                      Innovation & Code
-                    </h3>
-                    <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                      Développement moderne
-                    </p>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-white">
+                    <div className="text-center">
+                      <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                      <span className="text-dev-sm">Chargement du modèle 3D...</span>
+                    </div>
                   </div>
-                </motion.div>
+                )}
               </div>
             )}
           </div>

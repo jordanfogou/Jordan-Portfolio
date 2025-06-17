@@ -11,10 +11,11 @@ const Projects = () => {
       position: 'Stagiaire Développeur en Automatisation ETL',
       logo: '/mixxit.jpg',
       fallbackLogo: '🏢',
+      missionOverview: 'Développement d\'une solution d\'automatisation CRM intégrée',
       description: [
-        "Gestion de projet technique : Pilotage intégral du projet via Zoho Project et Zoho Sprint, coordination et gestion des priorités.",
         "Développement front-end et optimisation UX : Implémentation de widgets Zoho SalesIQ pour fluidifier l'expérience utilisateur.",
         "Conception et intégration d'API : Architecture d'échanges entre Zoho CRM et services externes (API REST, webhooks).",
+        "Gestion de projet technique : Pilotage intégral du projet via Zoho Project et Zoho Sprint, coordination et gestion des priorités.",
         "Configuration serveurs et webhooks : Scripts de surveillance pour détecter et prévenir les anomalies."
       ],
       technologies: ['Zoho', 'API REST', 'Webhooks', 'JavaScript', 'Deluge']
@@ -26,6 +27,7 @@ const Projects = () => {
       position: 'Stagiaire Développeur Full-stack (.NET Core C# & React)',
       logo: '/ogmentis_logo.jpg',
       fallbackLogo: '💻',
+      missionOverview: 'Développement d\'un espace administrateur SaaS sécurisé avec gestion utilisateurs optimisée',
       description: [
         "Développement d'un espace administrateur SaaS en .NET Core C# et React.",
         "Conception et implémentation de fonctionnalités Back-End sécurisées.",
@@ -41,6 +43,7 @@ const Projects = () => {
       position: 'Stagiaire Technicien Réseau',
       logo: '/etmtelecom_logo.jpeg',
       fallbackLogo: '🌐',
+      missionOverview: 'Conception, optimisation et sécurisation d\'infrastructures réseau multi-entités',
       description: [
         "Conception, optimisation et sécurisation d'infrastructures réseau pour entités variées.",
         "Analyse des besoins et configurations avancées pour communications sécurisées.",
@@ -56,6 +59,7 @@ const Projects = () => {
       position: 'Stagiaire Développeur Full-stack',
       logo: '/izisolutionscm_logo.jpg',
       fallbackLogo: '⚡',
+      missionOverview: 'Développement d\'une plateforme de gestion de projets centralisée avec suivi des tâches et communication collaborative',
       description: [
         "Participation au déploiement de solutions de gestion interne.",
         "Configuration d'environnement de développement local avec outils nécessaires.",
@@ -182,10 +186,32 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Description des tâches */}
+                  {/* Description générale de la mission */}
+                  {exp.missionOverview && (
+                    <motion.div 
+                      className="p-4 rounded-lg border-l-4"
+                      style={{ 
+                        background: 'var(--bg-glass)', 
+                        borderLeftColor: 'var(--accent-primary)',
+                        borderLeft: '4px solid var(--accent-primary)'
+                      }}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.1 + 0.2 }}
+                    >
+                      <div className="text-dev-sm font-semibold mb-2" style={{ color: 'var(--accent-primary)' }}>
+                        Mission principale :
+                      </div>
+                      <div className="text-dev-sm italic leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                        {exp.missionOverview}
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Description des tâches détaillées */}
                   <div className="space-y-3">
                     <div className="text-dev-sm font-semibold" style={{ color: 'var(--accent-primary)' }}>
-                      Missions réalisées :
+                      Tâches réalisées :
                     </div>
                     <ul className="space-y-2">
                       {exp.description.map((task, i) => (

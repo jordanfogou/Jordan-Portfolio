@@ -19,7 +19,7 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 1.2} // Encore plus réduit : 0.4/0.6 au lieu de 0.8/1.3
+        scale={isMobile ? 1.6 : 1.2} // Encore plus réduit : 0.4/0.6 au lieu de 0.8/1.3
         position={isMobile ? [0, -2, -1] : [0, -2.5, -1]} // Position plus proche et centrée
         rotation={[-0.01, -0.2, -0.1]}
       />
