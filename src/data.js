@@ -2,10 +2,10 @@
 
 export const profile = {
   name: 'Jordan Fogou',
-  role: 'Développeur full-stack',
+  role: 'Développeur full-stack et data',
   pitch:
     "Étudiant ingénieur en 5e année à CESI Nanterre. Je construis des applications web de bout en bout, de l'API à l'interface, et je les mets en ligne.",
-  status: "Je cherche un stage de fin d'études (PFE) en développement full-stack ou back-end.",
+  status: "Je cherche un stage de fin d'études de 6 mois, à partir du 1er février 2027, en développement full-stack ou en data.",
   location: 'Île-de-France',
   email: 'jordanfogou443@gmail.com',
   links: {
@@ -16,16 +16,17 @@ export const profile = {
 };
 
 export const about = [
-  "J'aime les projets où il faut faire tenir ensemble une base de données, une API et une interface utilisable par de vraies personnes. Mon dernier en date, Transvirex, est un ERP logistique complet : authentification, rôles métier, facturation, tableau de bord et suivi en temps réel.",
-  "Je travaille surtout avec React, Node.js/NestJS et PostgreSQL, et je développe en parallèle mes compétences en Java (Spring Boot) et Angular. Mes stages m'ont aussi fait passer par .NET, l'intégration d'API et le réseau.",
+  "J'aime les projets où il faut faire tenir ensemble une base de données, une API et une interface utilisable par de vraies personnes. Le dernier en date, Transvirex, est un ERP logistique que j'ai piloté en équipe : authentification, rôles métier, facturation, tableau de bord et suivi en temps réel.",
+  "Je travaille surtout avec React, Node.js/NestJS et PostgreSQL, et je m'intéresse de plus en plus à la data : modéliser, analyser et rendre lisibles les données qu'une application produit. Mes stages m'ont aussi fait passer par .NET, l'intégration d'API et le réseau.",
 ];
 
 export const featuredProject = {
   title: 'Transvirex ERP',
-  subtitle: 'ERP logistique en ligne',
+  subtitle: 'Projet d’équipe, que j’ai piloté de bout en bout',
   description:
     "Application de gestion pour une entreprise de transport : clients, chauffeurs, véhicules, livraisons et factures centralisés, avec un tableau de bord pour la direction et un assistant de dispatch.",
   points: [
+    'Pilotage du projet : découpage des tâches, coordination de l’équipe, suivi jusqu’à la mise en production',
     'API REST NestJS avec authentification JWT et rôles (direction, dispatch, chauffeur, facturation, admin)',
     'Modèle de données PostgreSQL géré avec Prisma (migrations, seed de démonstration)',
     'Interface React (Vite, Tailwind) : tableaux de bord Recharts, carte Leaflet, notifications Socket.IO',
@@ -133,7 +134,8 @@ export const experiences = [
 export const skills = [
   { group: 'Front-end', items: ['React', 'JavaScript', 'TypeScript', 'Angular', 'HTML / CSS', 'Tailwind'] },
   { group: 'Back-end', items: ['Node.js', 'NestJS', 'Java / Spring Boot', 'C# / .NET Core', 'PHP', 'Python'] },
-  { group: 'Données', items: ['PostgreSQL', 'Prisma', 'SQL Server', 'MySQL', 'MongoDB'] },
+  { group: 'Data', items: ['Python', 'Pandas', 'SQL', 'NetworkX', 'Recharts (visualisation)'] },
+  { group: 'Bases de données', items: ['PostgreSQL', 'Prisma', 'SQL Server', 'MySQL', 'MongoDB'] },
   { group: 'Outils et déploiement', items: ['Git', 'Docker', 'GitHub Actions', 'Render', 'Linux'] },
   { group: 'Réseau et sécurité', items: ['Cisco (CCNA 1)', 'Wireshark', 'Nmap', 'Active Directory'] },
 ];
