@@ -1,6 +1,8 @@
 import { Suspense, lazy, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig, profile } from '../data';
+import { inView, slideIn } from '../motion';
 
 const Earth = lazy(() => import('./Earth'));
 
@@ -24,7 +26,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section container contact">
-      <div className="contact-panel">
+      <motion.div className="contact-panel" variants={slideIn('left')} {...inView}>
         <h2 className="section-title">Contact</h2>
         <p className="contact-lead">
           Vous cherchez un stagiaire de fin d’études en full-stack ou en data à partir de février 2027 ?
@@ -54,13 +56,13 @@ export default function Contact() {
               `Le message n’est pas parti. Réessayez, ou écrivez à ${profile.email}.`}
           </p>
         </form>
-      </div>
+      </motion.div>
 
-      <div className="contact-earth">
+      <motion.div className="contact-earth" variants={slideIn('right', 0.1)} {...inView}>
         <Suspense fallback={null}>
           <Earth />
         </Suspense>
-      </div>
+      </motion.div>
     </section>
   );
 }

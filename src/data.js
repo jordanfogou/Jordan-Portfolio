@@ -5,9 +5,9 @@ export const profile = {
   role: 'Développeur full-stack et data',
   photo: '/new-profil image.jpg',
   intro:
-    "Étudiant ingénieur en 5e année à CESI Nanterre, je construis des applications web de bout en bout, de l'API à l'interface, et je les mets en ligne.",
+    "Élève ingénieur en 5e année à CESI Nanterre, je conçois des applications web complètes, de la base de données à l'interface, et j'exploite les données qu'elles produisent pour en tirer des indicateurs utiles. En entreprise, j'ai travaillé sur des intégrations d'API, des flux ETL et une application SaaS.",
   status:
-    "Je cherche un stage de fin d'études de 6 mois, à partir du 1er février 2027, en développement full-stack ou en data.",
+    "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027, en développement full-stack ou en data.",
   location: 'Île-de-France',
   email: 'jordanfogou443@gmail.com',
   links: {
@@ -26,29 +26,30 @@ export const navLinks = [
 ];
 
 export const about =
-  "J'aime les projets où il faut faire tenir ensemble une base de données, une API et une interface utilisable par de vraies personnes. Je travaille surtout avec React, Node.js/NestJS et PostgreSQL, et je m'intéresse de plus en plus à la data : modéliser, analyser et rendre lisibles les données qu'une application produit. Mes stages m'ont aussi fait passer par .NET, l'intégration d'API et le réseau.";
+  "Je cherche le bon compromis entre développement et data : construire des applications solides, puis donner du sens aux données qu'elles collectent. J'ai piloté en équipe un ERP logistique mis en production, développé des intégrations d'API et des flux ETL en stage, et je continue de monter en compétences sur Java/Spring Boot et l'analyse de données avec Python.";
 
 // icon : clé de l'icône dans src/components/About.js
 export const services = [
-  { title: 'Interfaces web', text: 'React, Angular, interfaces claires et responsives', icon: 'front' },
-  { title: 'API et back-end', text: 'NestJS, Spring Boot, .NET, authentification et rôles', icon: 'back' },
-  { title: 'Data', text: 'Modélisation SQL, analyse Python, tableaux de bord', icon: 'data' },
-  { title: 'Pilotage de projet', text: 'Coordination d’équipe, du besoin à la mise en ligne', icon: 'lead' },
+  { title: 'Développement full-stack', text: 'Applications web complètes avec React, NestJS, Spring Boot ou .NET', icon: 'front' },
+  { title: 'API et intégrations', text: 'API REST sécurisées, webhooks, échanges entre logiciels métier', icon: 'back' },
+  { title: 'Data', text: 'Flux ETL, modélisation SQL, analyse Python et tableaux de bord', icon: 'data' },
+  { title: 'Pilotage de projet', text: 'Coordination d’équipe, priorisation, du besoin à la mise en ligne', icon: 'lead' },
 ];
 
 export const experiences = [
   {
-    company: 'MOOVIT SAS',
-    role: 'Stagiaire développeur, automatisation CRM',
+    company: 'Mixxit (MOOVIT SAS)',
+    role: 'Stagiaire développeur data et automatisation (ETL)',
     place: 'Marseille',
     period: 'janv. 2025 – avr. 2025',
     logo: '/mixxit.jpg',
     points: [
-      'Intégration d’API entre Zoho CRM et des services externes (REST, webhooks)',
-      'Widgets Zoho SalesIQ pour simplifier le parcours des utilisateurs',
-      'Scripts de surveillance pour détecter les anomalies des webhooks',
-      'Pilotage du projet dans Zoho Projects et Zoho Sprints',
+      'J’ai mis sur pied des flux ETL qui synchronisent automatiquement les données entre Zoho CRM et des services externes (API REST, webhooks)',
+      'J’ai développé des scripts de surveillance pour détecter les anomalies et garantir la fiabilité des données échangées',
+      'J’ai intégré des widgets Zoho SalesIQ pour fluidifier le parcours des utilisateurs',
+      'J’ai piloté le projet de bout en bout dans Zoho Projects et Zoho Sprints',
     ],
+    stack: ['JavaScript', 'Deluge', 'API REST', 'Webhooks', 'Zoho CRM', 'ETL'],
   },
   {
     company: 'OGMENTIS',
@@ -57,10 +58,11 @@ export const experiences = [
     period: 'juil. 2024 – sept. 2024',
     logo: '/ogmentis_logo.jpg',
     points: [
-      'Espace administrateur d’une application SaaS en .NET Core et React',
-      'Fonctionnalités back-end sécurisées et gestion des utilisateurs',
-      'Interface React de visualisation 3D',
+      'J’ai développé l’espace administrateur d’une application SaaS en .NET Core et React',
+      'J’ai conçu des fonctionnalités back-end sécurisées pour la gestion des utilisateurs et la protection de leurs données',
+      'J’ai réalisé une interface React de visualisation 3D',
     ],
+    stack: ['C#', '.NET Core', 'React', 'SQL Server'],
   },
   {
     company: 'ETM Telecom',
@@ -69,10 +71,11 @@ export const experiences = [
     period: 'mai 2023 – juil. 2023',
     logo: '/etmtelecom_logo.jpeg',
     points: [
-      'Conception et sécurisation d’infrastructures réseau pour plusieurs clients',
-      'Diagnostic avec Wireshark et Cisco Packet Tracer',
-      'Gestion des accès via Active Directory',
+      'J’ai participé à la conception et à la sécurisation d’infrastructures réseau pour plusieurs clients',
+      'J’ai diagnostiqué et surveillé les réseaux avec Wireshark et Cisco Packet Tracer',
+      'J’ai administré les accès et les droits via Active Directory',
     ],
+    stack: ['Cisco', 'Wireshark', 'Active Directory', 'VLAN'],
   },
   {
     company: 'IZISOLUTIONS',
@@ -81,85 +84,148 @@ export const experiences = [
     period: 'mai 2022 – juil. 2022',
     logo: '/izisolutionscm_logo.jpg',
     points: [
-      'Fonctionnalités PHP pour la gestion de projets, de tâches et de messages',
-      'Interfaces responsives avec Bootstrap',
+      'J’ai développé en PHP des fonctionnalités de gestion de projets, de tâches et de messages',
+      'J’ai réalisé des interfaces responsives avec Bootstrap',
+    ],
+    stack: ['PHP', 'Twig', 'MySQL', 'Bootstrap'],
+  },
+];
+
+// Compétences regroupées par catégorie. icon : clé dans src/components/Tech.js
+export const skillGroups = [
+  {
+    title: 'Front-end',
+    icon: 'front',
+    skills: [
+      { name: 'React', icon: 'SiReact' },
+      { name: 'Angular', icon: 'SiAngular' },
+      { name: 'TypeScript', icon: 'SiTypescript' },
+      { name: 'JavaScript', icon: 'SiJavascript' },
+      { name: 'Tailwind CSS', icon: 'SiTailwindcss' },
+    ],
+  },
+  {
+    title: 'Back-end',
+    icon: 'back',
+    skills: [
+      { name: 'Node.js', icon: 'SiNodedotjs' },
+      { name: 'NestJS', icon: 'SiNestjs' },
+      { name: 'Java', icon: 'SiOpenjdk' },
+      { name: 'Spring Boot', icon: 'SiSpringboot' },
+      { name: '.NET / C#', icon: 'SiDotnet' },
+      { name: 'PHP', icon: 'SiPhp' },
+    ],
+  },
+  {
+    title: 'Data',
+    icon: 'data',
+    skills: [
+      { name: 'Python', icon: 'SiPython' },
+      { name: 'Pandas', icon: 'SiPandas' },
+      { name: 'SQL', icon: 'SiPostgresql' },
+      { name: 'ETL / API', icon: 'SiZoho' },
+      { name: 'Tableaux de bord', icon: 'SiChartdotjs' },
+    ],
+  },
+  {
+    title: 'Bases de données',
+    icon: 'db',
+    skills: [
+      { name: 'PostgreSQL', icon: 'SiPostgresql' },
+      { name: 'Prisma', icon: 'SiPrisma' },
+      { name: 'MySQL', icon: 'SiMysql' },
+      { name: 'MongoDB', icon: 'SiMongodb' },
+    ],
+  },
+  {
+    title: 'DevOps et outils',
+    icon: 'tools',
+    skills: [
+      { name: 'Git', icon: 'SiGit' },
+      { name: 'Docker', icon: 'SiDocker' },
+      { name: 'GitHub Actions', icon: 'SiGithubactions' },
+      { name: 'Render', icon: 'SiRender' },
+      { name: 'Linux', icon: 'SiLinux' },
+    ],
+  },
+  {
+    title: 'Réseau et sécurité',
+    icon: 'network',
+    skills: [
+      { name: 'Cisco (CCNA 1)', icon: 'SiCisco' },
+      { name: 'Wireshark', icon: 'SiWireshark' },
+      { name: 'Kali Linux', icon: 'SiKalilinux' },
     ],
   },
 ];
 
-// icon : nom d'une icône Simple Icons (react-icons/si)
-export const technologies = [
-  { name: 'React', icon: 'SiReact' },
-  { name: 'JavaScript', icon: 'SiJavascript' },
-  { name: 'TypeScript', icon: 'SiTypescript' },
-  { name: 'Angular', icon: 'SiAngular' },
-  { name: 'Tailwind', icon: 'SiTailwindcss' },
-  { name: 'Node.js', icon: 'SiNodedotjs' },
-  { name: 'NestJS', icon: 'SiNestjs' },
-  { name: 'Spring Boot', icon: 'SiSpringboot' },
-  { name: 'Java', icon: 'SiOpenjdk' },
-  { name: '.NET', icon: 'SiDotnet' },
-  { name: 'PHP', icon: 'SiPhp' },
-  { name: 'Python', icon: 'SiPython' },
-  { name: 'Pandas', icon: 'SiPandas' },
-  { name: 'PostgreSQL', icon: 'SiPostgresql' },
-  { name: 'Prisma', icon: 'SiPrisma' },
-  { name: 'MySQL', icon: 'SiMysql' },
-  { name: 'MongoDB', icon: 'SiMongodb' },
-  { name: 'Git', icon: 'SiGit' },
-  { name: 'Docker', icon: 'SiDocker' },
-  { name: 'GitHub Actions', icon: 'SiGithubactions' },
-  { name: 'Linux', icon: 'SiLinux' },
-  { name: 'Cisco', icon: 'SiCisco' },
-];
-
-// featured : projet mis en avant (carte plus large, placée en premier)
+// image : vignette 16:10 dans public/projects. github / live : laisser vide si pas de lien.
 export const projects = [
   {
     name: 'Transvirex ERP',
     featured: true,
-    label: 'Projet d’équipe, que j’ai piloté',
+    label: 'Projet piloté',
+    image: '/projects/transvirex.jpg',
     description:
-      "ERP logistique pour une entreprise de transport : clients, chauffeurs, véhicules, livraisons et factures centralisés, avec un tableau de bord pour la direction. J'ai coordonné l'équipe, du découpage des tâches jusqu'à la mise en production.",
-    tags: ['React', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Socket.IO', 'Render'],
+      "Au sein d'un groupe d'étudiants, j'ai piloté le projet. Nous avons conçu un ERP logistique pour une entreprise de transport : clients, chauffeurs, véhicules, livraisons et factures centralisés, rôles métier, tableau de bord pour la direction et suivi en temps réel, jusqu'à la mise en production.",
+    tags: ['React', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Socket.IO'],
+    github: '',
     live: 'https://transvirex-front1.onrender.com',
-    note: "Hébergement gratuit : le premier chargement peut prendre jusqu'à une minute.",
   },
   {
     name: 'Gestionnaire de tâches',
     label: 'En cours',
     description:
-      'Projet personnel pour monter en compétences sur Java : API Spring Boot sécurisée par JWT, JPA/Hibernate sur PostgreSQL, front Angular.',
+      "Projet personnel pour monter en compétences sur Java. J'ai développé une API Spring Boot sécurisée par JWT, avec JPA/Hibernate sur PostgreSQL, et un front Angular.",
     tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
+    icon: 'tasks',
+    github: '',
+    live: '',
   },
   {
     name: 'JerseyStoreFrance',
+    image: '/projects/jerseystore.jpg',
     description:
-      'Boutique e-commerce de maillots de football : catalogue, paiement en ligne, référencement et suivi des ventes.',
+      "J'ai mis sur pied une boutique e-commerce de maillots de football : catalogue, paiement en ligne, référencement et suivi des ventes.",
     tags: ['Shopify', 'Liquid', 'JavaScript', 'Stripe'],
+    github: '',
     live: 'https://www.jerseystorefrance.com',
   },
   {
     name: 'Plateforme de stages',
+    image: '/projects/plateforme-stages.jpg',
     description:
-      'Application web façon réseau professionnel, réalisée à quatre, pour mettre en relation étudiants et entreprises : profils, offres, messagerie.',
+      'En équipe de quatre étudiants, nous avons conçu une application web façon réseau professionnel pour mettre en relation étudiants et entreprises : profils, offres de stage, messagerie.',
     tags: ['PHP', 'Twig', 'MySQL', 'JavaScript'],
+    github: '',
+    live: '',
   },
   {
     name: 'Optimisation énergétique',
+    image: '/projects/optimisation-energetique.jpg',
     description:
-      'Algorithme de planification de tâches qui réduit le nombre de serveurs actifs dans un data center.',
+      'En binôme, nous avons développé un algorithme de planification de tâches qui réduit le nombre de serveurs actifs dans un data center, avec analyse des résultats en Python.',
     tags: ['Python', 'NetworkX', 'Pandas'],
+    github: '',
+    live: '',
   },
   {
     name: 'Station météo connectée',
-    description: 'Capteurs sur microcontrôleur, firmware embarqué et interface web de suivi en temps réel.',
+    image: '/projects/station-meteo.jpg',
+    description:
+      'En équipe de trois, nous avons conçu une station météo : capteurs sur microcontrôleur, firmware embarqué et interface web de suivi en temps réel.',
     tags: ['Arduino', 'C++', 'IoT'],
+    github: '',
+    live: '',
   },
   {
-    name: 'Audit réseau',
-    description: 'Audit d’une infrastructure sous Kali Linux : scan, analyse de trafic, règles de pare-feu.',
+    name: 'Audit et sécurisation réseau',
+    image: '/projects/audit-reseau.jpg',
+    description:
+      "J'ai audité une infrastructure sous Kali Linux : scan des ports, analyse du trafic et mise en place de règles de pare-feu.",
     tags: ['Kali Linux', 'Nmap', 'Wireshark', 'iptables'],
+    github: '',
+    live: '',
   },
 ];
 

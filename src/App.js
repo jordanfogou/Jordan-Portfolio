@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { MotionConfig } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -40,7 +41,7 @@ function useActiveSection() {
 export default function App() {
   const active = useActiveSection();
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <a className="skip-link" href="#a-propos">
         Aller au contenu
       </a>
@@ -54,6 +55,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </MotionConfig>
   );
 }

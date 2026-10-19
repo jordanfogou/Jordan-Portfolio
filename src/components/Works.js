@@ -1,40 +1,88 @@
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt, FaTasks } from 'react-icons/fa';
 import Section from './Section';
 import { projects } from '../data';
+import { fadeUp, inView, stagger } from '../motion';
+
+// Visuel de remplacement pour un projet sans capture
+const coverIcons = { tasks: FaTasks };
+
+function Cover({ project }) {
+  if (project.image) {
+    return <img src={project.image} alt={`Aperçu du projet ${project.name}`} loading="lazy" width="960" height="600" />;
+  }
+  const Icon = coverIcons[project.icon] || FaTasks;
+  return (
+    <div className="project-cover-fallback">
+      <Icon aria-hidden="true" />
+      <span>{project.name}</span>
+    </div>
+  );
+}
 
 export default function Works() {
   return (
     <Section
       id="projets"
       title="Mes projets"
-      intro="Une sélection de projets d’école, personnels et professionnels."
+      intro="Projets d’équipe et personnels, du web à la data. Les liens mènent au code source ou à la version en ligne."
     >
-      <ul className="projects">
+      <motion.ul className="projects" variants={stagger(0.1)} {...inView}>
         {projects.map((project) => (
-          <li
+          <motion.li
             key={project.name}
             className={`project-card${project.featured ? ' project-card--featured' : ''}`}
+            variants={fadeUp()}
+            whileHover={{ y: -6 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 22 }}
           >
-            <div className="project-top">
-              <h3>{project.name}</h3>
-              {project.label && <span className="project-label">{project.label}</span>}
-            </div>
-            <p className="project-desc">{project.description}</p>
-            <ul className="project-tags" aria-label="Technologies">
-              {project.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
-            {project.live && (
-              <div className="project-actions">
-                <a className="button" href={project.live} target="_blank" rel="noreferrer">
-                  {project.featured ? 'Voir l’application en ligne' : 'Voir le site'}
+            <div className="project-cover">
+              <Cover project={project} />
+              {project.github && (
+                <a
+                  className="project-github"
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Code source de ${project.name} sur GitHub`}
+                >
+                  <FaGithub />
                 </a>
-                {project.note && <span className="project-note">{project.note}</span>}
+              )}
+            </div>
+
+            <div className="project-body">
+              <div className="project-top">
+                <h3>{project.name}</h3>
+                {project.label && <span className="project-label">{project.label}</span>}
               </div>
-            )}
-          </li>
+              <p className="project-desc">{project.description}</p>
+              <ul className="project-tags" aria-label="Technologies">
+                {project.tags.map((tag) => (
+                  <li key={tag}>#{tag}</li>
+                ))}
+              </ul>
+              {(project.live || project.github) && (
+                <div className="project-links">
+                  {project.live && (
+                    <a className="button button-small" href={project.live} target="_blank" rel="noreferrer">
+                      <FaExternalLinkAlt aria-hidden="true" /> Voir en ligne
+                    </a>
+                  )}
+                  {project.github && (
+                    <a className="button button-small button-ghost" href={project.github} target="_blank" rel="noreferrer">
+                      <FaGithub aria-hidden="true" /> Code source
+                    </a>
+                  )}
+                </div>
+              )}
+              {project.featured && project.live && (
+                <p className="project-note">Hébergement gratuit : le premier chargement peut prendre jusqu’à une minute.</p>
+              )}
+            </div>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </Section>
   );
 }
