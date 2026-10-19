@@ -20,7 +20,7 @@ export default function About() {
           return (
             <motion.li
               key={service.title}
-              className="service-card"
+              className="service-card spot"
               variants={fadeUp()}
               whileHover={{ y: -6 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}

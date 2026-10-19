@@ -36,7 +36,7 @@ export default function Experience() {
             </motion.div>
             <p className="timeline-date">{exp.period}</p>
             <motion.article
-              className="timeline-card"
+              className="timeline-card spot"
               variants={slideIn(i % 2 === 0 ? 'left' : 'right')}
               {...inView}
             >

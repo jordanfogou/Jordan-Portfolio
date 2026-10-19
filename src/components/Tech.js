@@ -262,7 +262,7 @@ export default function Tech() {
             })}
           </div>
 
-          <div id="skill-panel" role="tabpanel" className="skill-panel">
+          <div id="skill-panel" role="tabpanel" className="skill-panel spot">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current.title}

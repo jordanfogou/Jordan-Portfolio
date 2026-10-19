@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-// Fond animé : faisceau de lignes ondulées qui se déforment lentement.
-// Dessiné sur un seul <canvas> fixe derrière le contenu.
+// Fond animé : faisceau de lignes ondulées en dégradé turquoise → pervenche.
+// Les lignes s'écartent doucement autour du curseur.
 // Une seule image figée si l'utilisateur réduit les animations ; pause quand l'onglet est caché.
-const LINES = 34;
-const COLOR = '134, 184, 177'; // = --accent (#86b8b1)
+const LINES = 38;
+const FROM = [79, 209, 191]; // --accent  #4fd1bf
+const TO = [143, 156, 255]; // --accent-2 #8f9cff
 
 export default function BackgroundLines() {
   const canvasRef = useRef(null);
@@ -17,24 +18,41 @@ export default function BackgroundLines() {
     let height = 0;
     let frame = 0;
     let last = 0;
+    // Position du curseur (lissée) ; hors écran au départ
+    const mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999 };
 
     const draw = (t) => {
       ctx.clearRect(0, 0, width, height);
-      const step = Math.max(8, width / 160);
+      mouse.x += (mouse.tx - mouse.x) * 0.08;
+      mouse.y += (mouse.ty - mouse.y) * 0.08;
+      const step = Math.max(8, width / 170);
+      const radius = Math.min(width, height) * 0.22;
+
       for (let i = 0; i < LINES; i += 1) {
         const k = i / (LINES - 1); // 0 → 1 d'une ligne à l'autre
-        const alpha = 0.05 + 0.2 * Math.sin(Math.PI * k);
-        ctx.strokeStyle = `rgba(${COLOR}, ${alpha.toFixed(3)})`;
+        const alpha = 0.07 + 0.3 * Math.sin(Math.PI * k);
+        const grad = ctx.createLinearGradient(0, 0, width, height);
+        grad.addColorStop(0, `rgba(${FROM.join(',')}, ${alpha.toFixed(3)})`);
+        grad.addColorStop(1, `rgba(${TO.join(',')}, ${alpha.toFixed(3)})`);
+        ctx.strokeStyle = grad;
         ctx.lineWidth = 1.2;
         ctx.beginPath();
         for (let x = -step; x <= width + step; x += step) {
           const u = x / width;
           // Le faisceau traverse l'écran en diagonale et ondule dans le temps
-          const base = height * (0.15 + 0.7 * u) + (k - 0.5) * height * 0.55;
+          const base = height * (0.15 + 0.7 * u) + (k - 0.5) * height * 0.6;
           const wave =
-            Math.sin(u * 5.5 + t * 0.00022 + k * 2.2) * height * 0.09 +
-            Math.sin(u * 2.3 - t * 0.00015 + k * 4.1) * height * 0.06;
-          const y = base + wave;
+            Math.sin(u * 5.5 + t * 0.0004 + k * 2.2) * height * 0.09 +
+            Math.sin(u * 2.3 - t * 0.00028 + k * 4.1) * height * 0.06;
+          let y = base + wave;
+          // Écartement autour du curseur
+          const dx = x - mouse.x;
+          const dy = y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < radius) {
+            const push = (1 - dist / radius) ** 2 * 60;
+            y += dy >= 0 ? push : -push;
+          }
           if (x === -step) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         }
@@ -54,14 +72,22 @@ export default function BackgroundLines() {
 
     const loop = (t) => {
       frame = requestAnimationFrame(loop);
-      if (t - last < 33) return; // ~30 images/s suffisent pour un mouvement lent
+      if (t - last < 25) return; // ~40 images/s
       last = t;
       draw(t);
     };
 
+    const onMove = (e) => {
+      mouse.tx = e.clientX;
+      mouse.ty = e.clientY;
+    };
+    const onLeave = () => {
+      mouse.tx = -9999;
+      mouse.ty = -9999;
+    };
     const onVisibility = () => {
-      if (document.hidden) cancelAnimationFrame(frame);
-      else if (!reduce) frame = requestAnimationFrame(loop);
+      cancelAnimationFrame(frame);
+      if (!document.hidden) frame = requestAnimationFrame(loop);
     };
 
     resize();
@@ -70,12 +96,16 @@ export default function BackgroundLines() {
       draw(0);
     } else {
       frame = requestAnimationFrame(loop);
+      window.addEventListener('pointermove', onMove, { passive: true });
+      document.addEventListener('pointerleave', onLeave);
       document.addEventListener('visibilitychange', onVisibility);
     }
 
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener('resize', resize);
+      window.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerleave', onLeave);
       document.removeEventListener('visibilitychange', onVisibility);
     };
   }, []);

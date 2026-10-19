@@ -32,7 +32,7 @@ export default function Works() {
         {projects.map((project) => (
           <motion.li
             key={project.name}
-            className={`project-card${project.featured ? ' project-card--featured' : ''}`}
+            className={`project-card spot${project.featured ? ' project-card--featured' : ''}`}
             variants={fadeUp()}
             whileHover={{ y: -6 }}
             transition={{ type: 'spring', stiffness: 300, damping: 22 }}

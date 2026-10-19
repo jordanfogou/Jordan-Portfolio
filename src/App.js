@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MotionConfig } from 'framer-motion';
+import { MotionConfig, motion, useScroll, useSpring } from 'framer-motion';
 import BackgroundLines from './components/BackgroundLines';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -39,11 +39,34 @@ function useActiveSection() {
   return active;
 }
 
+// Lumière qui suit le curseur sur les cartes marquées .spot (position passée en variables CSS)
+function useSpotlight() {
+  useEffect(() => {
+    const onMove = (e) => {
+      const card = e.target.closest && e.target.closest('.spot');
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    };
+    window.addEventListener('pointermove', onMove, { passive: true });
+    return () => window.removeEventListener('pointermove', onMove);
+  }, []);
+}
+
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
+  return <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />;
+}
+
 export default function App() {
   const active = useActiveSection();
+  useSpotlight();
   return (
     <MotionConfig reducedMotion="user">
       <BackgroundLines />
+      <ScrollProgress />
       <a className="skip-link" href="#a-propos">
         Aller au contenu
       </a>

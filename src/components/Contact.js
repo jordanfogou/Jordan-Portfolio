@@ -26,7 +26,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section container contact">
-      <motion.div className="contact-panel" variants={slideIn('left')} {...inView}>
+      <motion.div className="contact-panel spot" variants={slideIn('left')} {...inView}>
         <h2 className="section-title">Contact</h2>
         <p className="contact-lead">
           Vous cherchez un stagiaire de fin d’études en full-stack ou en data à partir de février 2027 ?
