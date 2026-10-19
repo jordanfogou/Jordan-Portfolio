@@ -47,5 +47,8 @@
     "@babel/plugin-transform-class-properties": "^7.25.7",
     "@babel/plugin-transform-private-methods": "^7.25.7"
   },
-  "homepage": "."
+  "homepage": ".",
+  "engines": {
+    "node": "22.x"
+  }
 }
