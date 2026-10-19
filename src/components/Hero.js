@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { profile } from '../data';
 import { fadeUp, stagger } from '../motion';
+import { asset } from '../asset';
 
 const Computer = lazy(() => import('./Computer'));
 
@@ -11,7 +12,7 @@ export default function Hero() {
       <div className="hero-content container">
         <motion.img
           className="hero-photo"
-          src={encodeURI(profile.photo)}
+          src={asset(profile.photo)}
           alt={profile.name}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

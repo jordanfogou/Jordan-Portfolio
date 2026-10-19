@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import Section from './Section';
 import { experiences } from '../data';
 import { inView, slideIn } from '../motion';
+import { asset } from '../asset';
 
 function Logo({ src, company }) {
   const [failed, setFailed] = useState(false);
@@ -31,7 +32,7 @@ export default function Experience() {
               viewport={{ once: true, amount: 0.8 }}
               transition={{ type: 'spring', stiffness: 260, damping: 18 }}
             >
-              <Logo src={exp.logo} company={exp.company} />
+              <Logo src={asset(exp.logo)} company={exp.company} />
             </motion.div>
             <p className="timeline-date">{exp.period}</p>
             <motion.article

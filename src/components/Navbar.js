@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { navLinks, profile } from '../data';
+import { asset } from '../asset';
 
 export default function Navbar({ active }) {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Navbar({ active }) {
           ))}
         </ul>
 
-        <a className="button nav-cv" href={encodeURI(profile.cv)} download>
+        <a className="button nav-cv" href={asset(profile.cv)} download>
           Télécharger mon CV
         </a>
 
@@ -60,7 +61,7 @@ export default function Navbar({ active }) {
               </li>
             ))}
           </ul>
-          <a className="button" href={encodeURI(profile.cv)} download onClick={() => setOpen(false)}>
+          <a className="button" href={asset(profile.cv)} download onClick={() => setOpen(false)}>
             Télécharger mon CV
           </a>
         </div>

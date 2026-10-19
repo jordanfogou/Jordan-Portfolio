@@ -14,6 +14,7 @@
   --font: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --nav-h: 4.5rem;
   --radius: 10px;
+  color-scheme: dark;
 }
 
 *,

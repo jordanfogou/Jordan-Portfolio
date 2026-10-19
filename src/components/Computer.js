@@ -2,6 +2,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { asset } from '../asset';
 
 function useMediaQuery(query) {
   const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
@@ -15,7 +16,7 @@ function useMediaQuery(query) {
 }
 
 function Computer({ isMobile }) {
-  const computer = useGLTF('/desktop_pc/scene.gltf');
+  const computer = useGLTF(asset('/desktop_pc/scene.gltf'));
   return (
     <group>
       <hemisphereLight intensity={2.2} groundColor="#000000" />

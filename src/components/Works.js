@@ -3,13 +3,14 @@ import { FaGithub, FaExternalLinkAlt, FaTasks } from 'react-icons/fa';
 import Section from './Section';
 import { projects } from '../data';
 import { fadeUp, inView, stagger } from '../motion';
+import { asset } from '../asset';
 
 // Visuel de remplacement pour un projet sans capture
 const coverIcons = { tasks: FaTasks };
 
 function Cover({ project }) {
   if (project.image) {
-    return <img src={project.image} alt={`Aperçu du projet ${project.name}`} loading="lazy" width="960" height="600" />;
+    return <img src={asset(project.image)} alt={`Aperçu du projet ${project.name}`} loading="lazy" width="960" height="600" />;
   }
   const Icon = coverIcons[project.icon] || FaTasks;
   return (
