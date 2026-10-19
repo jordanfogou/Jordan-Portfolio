@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap');
 
-/* Palette : fond sombre uni, duo turquoise / pervenche vif mais pas néon */
+/* Palette : fond sombre uni, UNE couleur principale forte appliquée partout.
+   Pour changer la couleur du site, modifier --accent (et ses valeurs RGB plus bas). */
 :root {
   --bg: #10151c;          /* fond unique */
   --surface: #171f29;     /* cartes */
@@ -8,10 +9,10 @@
   --ink: #e8eef0;         /* texte principal */
   --ink-soft: #9fadb3;    /* texte secondaire */
   --rule: #283442;        /* filets et bordures */
-  --accent: #4fd1bf;      /* turquoise franc */
-  --accent-2: #8f9cff;    /* bleu pervenche */
+  --accent: #2ec4b0;      /* couleur principale : turquoise franc, plein */
+  --accent-2: var(--accent);
   --accent-ink: #0d1218;  /* texte posé sur l'accent */
-  --grad: linear-gradient(110deg, var(--accent), var(--accent-2));
+  --grad: linear-gradient(var(--accent), var(--accent)); /* aplat : plus aucun dégradé */
 
   --font: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --nav-h: 4.5rem;
@@ -805,7 +806,7 @@ main,
   inset: 22%;
   border-radius: 50%;
   border: 1px solid var(--rule);
-  box-shadow: 0 0 0 1px var(--rule), inset 0 0 60px rgba(79, 209, 191, 0.08);
+  box-shadow: 0 0 0 1px var(--rule), inset 0 0 60px rgba(46, 196, 176, 0.08);
 }
 
 .cloud-item {
@@ -1292,10 +1293,7 @@ main,
 
 /* Texte en dégradé turquoise → pervenche */
 .gradient-text {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 /* Rôle qui change en boucle sous le titre */
@@ -1341,18 +1339,14 @@ main,
 
 /* Boutons principaux en dégradé, léger halo au survol */
 .button {
-  background: var(--grad);
-  background-size: 160% 100%;
-  background-position: 0 0;
-  transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  background: var(--accent);
+  transition: background-color 0.25s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background: var(--grad);
-  background-size: 160% 100%;
-  background-position: 100% 0;
+  background: #5fd8c7;
   color: var(--accent-ink);
-  box-shadow: 0 8px 28px -8px rgba(79, 209, 191, 0.55);
+  box-shadow: 0 8px 28px -8px rgba(46, 196, 176, 0.55);
   transform: translateY(-1px);
 }
 
@@ -1364,7 +1358,7 @@ main,
 
 .button-ghost:hover {
   color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent), 0 8px 28px -10px rgba(79, 209, 191, 0.45);
+  box-shadow: inset 0 0 0 1px var(--accent), 0 8px 28px -10px rgba(46, 196, 176, 0.45);
 }
 
 /* Lumière qui suit le curseur sur les cartes */
@@ -1373,16 +1367,16 @@ main,
   --my: -999px;
   background-image: radial-gradient(
     380px circle at var(--mx) var(--my),
-    rgba(79, 209, 191, 0.12),
-    rgba(143, 156, 255, 0.06) 40%,
+    rgba(46, 196, 176, 0.12),
+    rgba(46, 196, 176, 0.06) 40%,
     transparent 70%
   );
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .spot:hover {
-  border-color: rgba(79, 209, 191, 0.55);
-  box-shadow: 0 18px 50px -24px rgba(79, 209, 191, 0.45);
+  border-color: rgba(46, 196, 176, 0.55);
+  box-shadow: 0 18px 50px -24px rgba(46, 196, 176, 0.45);
 }
 
 /* Accents en dégradé sur les éléments de structure */
@@ -1394,27 +1388,27 @@ main,
 
 .hero-line-dot {
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(79, 209, 191, 0.15);
+  box-shadow: 0 0 0 6px rgba(46, 196, 176, 0.15);
   animation: dot-pulse 2.4s ease-in-out infinite;
 }
 
 .hero-line-bar {
-  background: linear-gradient(var(--accent), var(--accent-2), transparent);
+  background: linear-gradient(var(--accent), transparent);
   opacity: 1;
 }
 
 @keyframes dot-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 4px rgba(79, 209, 191, 0.18);
+    box-shadow: 0 0 0 4px rgba(46, 196, 176, 0.18);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(79, 209, 191, 0.05);
+    box-shadow: 0 0 0 10px rgba(46, 196, 176, 0.05);
   }
 }
 
 .timeline-progress {
-  background: linear-gradient(var(--accent), var(--accent-2));
+  background: var(--accent);
 }
 
 .nav-links a[aria-current='true'] {
@@ -1428,7 +1422,7 @@ main,
 
 .cloud-item[data-lit='true'] {
   border-color: var(--accent);
-  box-shadow: 0 0 18px -6px rgba(79, 209, 191, 0.6);
+  box-shadow: 0 0 18px -6px rgba(46, 196, 176, 0.6);
 }
 
 .cloud-item:nth-child(even) svg {
@@ -1438,7 +1432,7 @@ main,
 .project-card--featured {
   border-color: transparent;
   background:
-    radial-gradient(380px circle at var(--mx) var(--my), rgba(79, 209, 191, 0.12), transparent 70%),
+    radial-gradient(380px circle at var(--mx) var(--my), rgba(46, 196, 176, 0.12), transparent 70%),
     linear-gradient(var(--surface), var(--surface)) padding-box,
     var(--grad) border-box;
   border: 1px solid transparent;

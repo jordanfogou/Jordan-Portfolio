@@ -1,11 +1,10 @@
 import { useEffect, useRef } from 'react';
 
-// Fond animé : faisceau de lignes ondulées en dégradé turquoise → pervenche.
+// Fond animé : faisceau de lignes ondulées dans la couleur principale du site.
 // Les lignes s'écartent doucement autour du curseur.
 // Une seule image figée si l'utilisateur réduit les animations ; pause quand l'onglet est caché.
 const LINES = 38;
-const FROM = [79, 209, 191]; // --accent  #4fd1bf
-const TO = [143, 156, 255]; // --accent-2 #8f9cff
+const COLOR = [46, 196, 176]; // = --accent (#2ec4b0)
 
 export default function BackgroundLines() {
   const canvasRef = useRef(null);
@@ -31,10 +30,7 @@ export default function BackgroundLines() {
       for (let i = 0; i < LINES; i += 1) {
         const k = i / (LINES - 1); // 0 → 1 d'une ligne à l'autre
         const alpha = 0.07 + 0.3 * Math.sin(Math.PI * k);
-        const grad = ctx.createLinearGradient(0, 0, width, height);
-        grad.addColorStop(0, `rgba(${FROM.join(',')}, ${alpha.toFixed(3)})`);
-        grad.addColorStop(1, `rgba(${TO.join(',')}, ${alpha.toFixed(3)})`);
-        ctx.strokeStyle = grad;
+        ctx.strokeStyle = `rgba(${COLOR.join(',')}, ${alpha.toFixed(3)})`;
         ctx.lineWidth = 1.2;
         ctx.beginPath();
         for (let x = -step; x <= width + step; x += step) {
