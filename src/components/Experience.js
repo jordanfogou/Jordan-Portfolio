@@ -43,6 +43,7 @@ export default function Experience() {
               <p className="timeline-company">
                 {exp.company}, {exp.place}
               </p>
+              {exp.summary && <p className="timeline-summary">{exp.summary}</p>}
               <ul className="timeline-points">
                 {exp.points.map((point) => (
                   <li key={point}>{point}</li>

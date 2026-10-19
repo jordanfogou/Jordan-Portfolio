@@ -83,6 +83,23 @@ a:hover {
   color: var(--accent-ink);
 }
 
+/* Fond animé (canvas fixe) derrière tout le contenu */
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -645,6 +662,12 @@ a:hover {
   font-weight: 500;
 }
 
+.timeline-summary {
+  margin-top: 0.9rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
 .timeline-points {
   margin-top: 1rem;
   display: grid;
@@ -749,14 +772,151 @@ a:hover {
 
 /* ---------- Compétences ---------- */
 
-/* Bandeaux défilants : deux lignes en sens opposés, pause au survol */
-.marquees {
+.skills-layout {
   margin-top: 3rem;
   display: grid;
-  gap: 0.9rem;
+  gap: 2.5rem;
+  align-items: center;
 }
 
+@media (min-width: 64rem) {
+  .skills-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Nuage 3D */
+.cloud {
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.cloud-glow {
+  position: absolute;
+  inset: 22%;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  box-shadow: 0 0 0 1px var(--rule), inset 0 0 0 30px rgba(134, 184, 177, 0.03);
+}
+
+.cloud-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.cloud-item svg {
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.cloud-item[data-lit='true'] {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* Onglets par domaine */
+.skill-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.skill-tab:hover {
+  color: var(--ink);
+}
+
+.skill-tab[aria-selected='true'] {
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+/* Pastille qui glisse d'un onglet à l'autre */
+.skill-tab-pill {
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.skill-panel {
+  margin-top: 1.5rem;
+  min-height: 12rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.skill-panel-count {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.skill-chips {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 0.95rem;
+  border-radius: 8px;
+  background: var(--surface-2);
+  font-weight: 500;
+  cursor: default;
+}
+
+.skill-chip svg {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* Bandeau défilant, pause au survol */
 .marquee {
+  margin-top: 3.5rem;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -766,11 +926,7 @@ a:hover {
   display: flex;
   gap: 0.9rem;
   width: max-content;
-  animation: marquee 40s linear infinite;
-}
-
-.marquee--reverse .marquee-track {
-  animation-direction: reverse;
+  animation: marquee 50s linear infinite;
 }
 
 .marquee:hover .marquee-track {
@@ -791,7 +947,6 @@ a:hover {
   border: 1px solid var(--rule);
   border-radius: 999px;
   background: var(--surface);
-  color: var(--ink);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -807,82 +962,6 @@ a:hover {
     flex-wrap: wrap;
     width: auto;
   }
-}
-
-.skill-groups {
-  margin-top: 3rem;
-  display: grid;
-  gap: 1.25rem;
-}
-
-@media (min-width: 48rem) {
-  .skill-groups {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 72rem) {
-  .skill-groups {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.skill-group {
-  padding: 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  transition: border-color 0.25s ease;
-}
-
-.skill-group:hover {
-  border-color: var(--accent);
-}
-
-.skill-group-head {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.skill-group-icon {
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 8px;
-  background: var(--surface-2);
-  color: var(--accent);
-  font-size: 1.15rem;
-}
-
-.skill-group h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.skill-chips {
-  margin-top: 1.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-}
-
-.skill-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.8rem;
-  border-radius: 6px;
-  background: var(--surface-2);
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: default;
-}
-
-.skill-chip svg {
-  color: var(--accent);
-  font-size: 1.05rem;
 }
 
 /* ---------- Projets ---------- */
@@ -1183,4 +1262,16 @@ a:hover {
 
 .footer-links a:hover {
   color: var(--accent);
+}
+
+/* Nuage plus compact sur petit écran */
+@media (max-width: 40rem) {
+  .cloud-item {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .cloud-item svg {
+    font-size: 0.95rem;
+  }
 }

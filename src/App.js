@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MotionConfig } from 'framer-motion';
+import BackgroundLines from './components/BackgroundLines';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -42,6 +43,7 @@ export default function App() {
   const active = useActiveSection();
   return (
     <MotionConfig reducedMotion="user">
+      <BackgroundLines />
       <a className="skip-link" href="#a-propos">
         Aller au contenu
       </a>
