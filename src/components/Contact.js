@@ -29,7 +29,7 @@ export default function Contact() {
       <motion.div className="contact-panel spot" variants={slideIn('left')} {...inView}>
         <h2 className="section-title">Contact</h2>
         <p className="contact-lead">
-          Vous cherchez un stagiaire de fin d’études en full-stack ou en data à partir de février 2027 ?
+          Vous cherchez un stagiaire de fin d’études en data engineering ou en data à partir de février 2027 ?
           Laissez-moi un message, ou écrivez directement à{' '}
           <a href={`mailto:${profile.email}`}>{profile.email}</a>.
         </p>

@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaTasks } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaTasks, FaBrain } from 'react-icons/fa';
 import Section from './Section';
 import { projects } from '../data';
 import { fadeUp, inView, stagger } from '../motion';
 import { asset } from '../asset';
 
 // Visuel de remplacement pour un projet sans capture
-const coverIcons = { tasks: FaTasks };
+const coverIcons = { tasks: FaTasks, ml: FaBrain };
 
 function Cover({ project }) {
   if (project.image) {
@@ -26,7 +26,7 @@ export default function Works() {
     <Section
       id="projets"
       title="Mes projets"
-      intro="Projets d’équipe et personnels, du web à la data. Les liens mènent au code source ou à la version en ligne."
+      intro="Projets d’équipe et personnels autour de la donnée : modélisation, tableaux de bord, deep learning, et les applications qui les font vivre."
     >
       <motion.ul className="projects" variants={stagger(0.1)} {...inView}>
         {projects.map((project) => (

@@ -7,7 +7,7 @@ import { asset } from '../asset';
 const Computer = lazy(() => import('./Computer'));
 
 // Les rôles défilent un par un sous le titre
-const roles = ['Développeur full-stack', 'Développeur data', 'Chef de projet technique'];
+const roles = ['Data Engineer', 'Pipelines ETL et API', 'Machine learning et NLP'];
 
 function RotatingRole() {
   const [index, setIndex] = useState(0);

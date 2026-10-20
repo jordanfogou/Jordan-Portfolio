@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaPlug, FaChartBar, FaUsers } from 'react-icons/fa';
+import { FaProjectDiagram, FaDatabase, FaBrain, FaCode } from 'react-icons/fa';
 import Section from './Section';
 import { about, services } from '../data';
 import { fadeUp, inView, stagger } from '../motion';
 
 const icons = {
-  front: FaLaptopCode,
-  back: FaPlug,
-  data: FaChartBar,
-  lead: FaUsers,
+  pipeline: FaProjectDiagram,
+  db: FaDatabase,
+  ml: FaBrain,
+  code: FaCode,
 };
 
 export default function About() {

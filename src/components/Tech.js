@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FaLaptopCode, FaServer, FaChartBar, FaDatabase, FaTools, FaNetworkWired, FaLayerGroup } from 'react-icons/fa';
+import { FaLaptopCode, FaServer, FaChartBar, FaDatabase, FaTools, FaNetworkWired, FaLayerGroup, FaProjectDiagram, FaBrain } from 'react-icons/fa';
 import {
   SiReact,
   SiAngular,
@@ -29,6 +29,11 @@ import {
   SiCisco,
   SiWireshark,
   SiKalilinux,
+  SiTensorflow,
+  SiKeras,
+  SiScikitlearn,
+  SiNumpy,
+  SiJupyter,
 } from 'react-icons/si';
 import Section from './Section';
 import { skillGroups } from '../data';
@@ -63,6 +68,11 @@ const skillIcons = {
   SiCisco,
   SiWireshark,
   SiKalilinux,
+  SiTensorflow,
+  SiKeras,
+  SiScikitlearn,
+  SiNumpy,
+  SiJupyter,
 };
 
 const groupIcons = {
@@ -73,6 +83,8 @@ const groupIcons = {
   db: FaDatabase,
   tools: FaTools,
   network: FaNetworkWired,
+  pipeline: FaProjectDiagram,
+  ml: FaBrain,
 };
 
 // Toutes les compétences sans doublon
