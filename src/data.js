@@ -46,11 +46,11 @@ export const experiences = [
     summary:
       "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis en place un pipeline ETL : récupérer les données via des API, automatiser leur collecte avec des scripts, puis les traiter pour les rendre exploitables.",
     points: [
-      'J’ai récupéré les données de plusieurs outils via leurs API REST et des webhooks',
-      'J’ai développé des scripts en Deluge pour automatiser cette collecte et la synchronisation avec le CRM',
-      'J’ai nettoyé, transformé et structuré les données avec Zoho DataPrep',
-      'J’ai chargé les données dans Zoho Analytics et orchestré les workflows de la suite Zoho (CRM, Flow, Sheet)',
-      'Moins de tâches manuelles, un CRM plus fiable et des données exploitables pour la prospection, le suivi commercial et le reporting',
+      'Grâce aux API REST et aux webhooks des différents outils, j’ai pu récupérer automatiquement les données commerciales',
+      'En développant des scripts en Deluge, j’ai automatisé cette collecte et la synchronisation avec le CRM',
+      'Avec Zoho DataPrep, j’ai pu nettoyer, transformer et structurer les données',
+      'En chargeant les données dans Zoho Analytics et en orchestrant les workflows Zoho (CRM, Flow, Sheet), je les ai rendues exploitables pour le reporting',
+      'Grâce à ce pipeline, l’équipe a réduit ses tâches manuelles et dispose d’un CRM fiable pour la prospection et le suivi commercial',
     ],
     stack: ['ETL', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'Zoho Flow', 'Deluge', 'API REST', 'Webhooks'],
   },
@@ -63,10 +63,10 @@ export const experiences = [
     summary:
       "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
-      'J’ai développé l’API en .NET Core (C#) : gestion des utilisateurs, des rôles et des droits d’accès',
-      'J’ai sécurisé les accès et protégé les données côté back-end',
-      'J’ai conçu l’interface d’administration en React, avec une vue de visualisation 3D',
-      'J’ai documenté l’API avec Swagger',
+      'En développant l’API en .NET Core (C#), j’ai mis en place la gestion des utilisateurs, des rôles et des droits d’accès',
+      'Grâce à la sécurisation des accès côté back-end, j’ai pu protéger les données de l’application',
+      'Avec React, j’ai conçu l’interface d’administration, dont une vue de visualisation 3D',
+      'Grâce à Swagger, j’ai documenté l’API pour que l’équipe puisse l’utiliser facilement',
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
   },
@@ -79,9 +79,9 @@ export const experiences = [
     summary:
       "J'ai participé au développement d'une plateforme interne de gestion de projets et de communication, de la maquette jusqu'au support des utilisateurs.",
     points: [
-      'J’ai conçu les maquettes des interfaces sur Figma, puis développé le front-end (HTML, CSS, JavaScript, jQuery, Bootstrap)',
-      'J’ai développé la partie back-end en PHP Laravel pour la gestion des données',
-      'J’ai formé les utilisateurs et assuré le support technique',
+      'Grâce à des maquettes conçues sur Figma, j’ai pu valider les interfaces avant de développer le front-end (HTML, CSS, JavaScript, jQuery, Bootstrap)',
+      'En PHP Laravel, j’ai développé la partie back-end qui gère les données de la plateforme',
+      'En formant les utilisateurs et en assurant le support, j’ai facilité la prise en main de l’outil',
     ],
     stack: ['PHP', 'Laravel', 'JavaScript', 'jQuery', 'Bootstrap', 'Figma'],
   },
