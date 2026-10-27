@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaProjectDiagram, FaDatabase, FaBrain, FaCode } from 'react-icons/fa';
+import { FaProjectDiagram, FaDatabase, FaBrain, FaCode, FaCloudUploadAlt } from 'react-icons/fa';
 import Section from './Section';
 import { about, services } from '../data';
 import { fadeUp, inView, stagger } from '../motion';
@@ -9,6 +9,7 @@ const icons = {
   db: FaDatabase,
   ml: FaBrain,
   code: FaCode,
+  cloud: FaCloudUploadAlt,
 };
 
 export default function About() {

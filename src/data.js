@@ -5,9 +5,9 @@ export const profile = {
   role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI Nanterre, je conçois des API, des bases de données et des pipelines de données, avec SQL et Python comme socle commun. En stage, j'ai intégré des API et automatisé des flux ETL autour d'un CRM ; en projet, j'ai piloté un ERP mis en production, de l'API NestJS au tableau de bord.",
+    "Élève ingénieur en 5e année à CESI Nanterre, je suis passionné par la gestion et la valorisation des données, de l'API qui les produit jusqu'au pipeline qui les rend exploitables. C'est pourquoi je recherche un stage dans deux métiers étroitement liés : le développement back-end et le data engineering.",
   status:
-    "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027, en développement back-end ou en data engineering.",
+    "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
   email: 'jordanfogou443@gmail.com',
   links: {
@@ -26,14 +26,14 @@ export const navLinks = [
 ];
 
 export const about =
-  "Ce qui m'intéresse, c'est ce qui se passe derrière l'écran : les API qui font tourner une application, les bases de données qui la portent, et les pipelines qui transforment ses données en décisions. J'ai développé des fonctionnalités back-end en .NET Core, mis sur pied un pipeline de données CRM en entreprise, et piloté un ERP mis en production. Je me forme en continu, en ce moment sur Java Spring Boot et Databricks.";
+  "Dès ma première année du cycle ingénieur, j'ai été fasciné par ce qui se passe derrière l'écran : les API qui font tourner une application, les bases de données qui la portent, et les pipelines qui transforment ses données en décisions. Depuis, je travaille sur les deux versants de ce même sujet. Côté développement, j'ai conçu des API et des applications full-stack en .NET Core, NestJS et React, jusqu'à leur mise en production. Côté data, j'ai mis sur pied un pipeline ETL en entreprise et modélisé des bases de données qui alimentent des tableaux de bord. Je me forme en continu, en ce moment sur Java Spring Boot et Databricks.";
 
 // icon : clé de l'icône dans src/components/About.js
 export const services = [
   { title: 'Back-end et API', text: 'API REST en NestJS, .NET ou Spring Boot, authentification JWT, mise en production', icon: 'code' },
   { title: 'Pipelines de données', text: 'Flux ETL, intégration d’API et de webhooks, automatisation des échanges entre outils', icon: 'pipeline' },
   { title: 'Bases de données et SQL', text: 'Modélisation relationnelle, requêtes, qualité et fiabilité des données', icon: 'db' },
-  { title: 'Machine learning', text: 'Vision par ordinateur et NLP avec TensorFlow/Keras, évaluation des modèles', icon: 'ml' },
+  { title: 'Mise en production', text: 'Docker, CI/CD avec GitHub Actions, déploiement cloud d’API et de bases de données', icon: 'cloud' },
 ];
 
 export const experiences = [
@@ -44,9 +44,10 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie unifiée et de communication professionnelle. J'ai travaillé sur l'automatisation de l'acquisition, du traitement et de l'exploitation des données commerciales.",
+      "Mixxit édite des solutions de téléphonie unifiée et de communication professionnelle.",
+    brief:
+      "J'ai mis en place un pipeline ETL en développant des scripts qui automatisent les processus commerciaux de l'entreprise, afin de réduire les tâches manuelles et de fiabiliser les données du CRM.",
     points: [
-      'J’ai mis sur pied un pipeline automatisé de gestion et de valorisation des données CRM, qui relie plusieurs outils et automatise les échanges entre eux',
       'J’ai développé des fonctions personnalisées en Deluge, configuré des webhooks et intégré des API REST externes',
       'J’ai orchestré les workflows dans la suite Zoho (CRM, Flow, Sheet, DataPrep, Analytics)',
       'Résultat : moins de tâches manuelles, un CRM plus fiable et des données exploitables pour la prospection, le suivi commercial et le reporting',
@@ -59,25 +60,13 @@ export const experiences = [
     place: 'Reims',
     period: 'juil. 2024 – sept. 2024',
     logo: '/ogmentis_logo.jpg',
+    brief:
+      "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
-      'J’ai développé l’espace administrateur d’une application SaaS en .NET Core (C#) et React',
       'J’ai conçu et implémenté des fonctionnalités back-end sécurisées',
       'J’ai réalisé une interface utilisateur claire et intuitive en React',
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server'],
-  },
-  {
-    company: 'ETM Telecom',
-    role: 'Stagiaire technicien réseau',
-    place: 'Paris',
-    period: 'mai 2023 – juil. 2023',
-    logo: '/etmtelecom_logo.jpeg',
-    points: [
-      'J’ai participé à la conception et à la sécurisation d’infrastructures réseau pour plusieurs clients',
-      'J’ai diagnostiqué et surveillé les réseaux avec Wireshark et Cisco Packet Tracer',
-      'J’ai administré les accès et les droits via Active Directory',
-    ],
-    stack: ['Cisco', 'Wireshark', 'Active Directory', 'VLAN'],
   },
   {
     company: 'IziSolutions',
@@ -85,8 +74,9 @@ export const experiences = [
     place: 'Yaoundé, Cameroun',
     period: 'mai 2023 – juil. 2023',
     logo: '/izisolutionscm_logo.jpg',
+    brief:
+      "J'ai participé au développement d'une plateforme interne de gestion de projets et de communication, de la maquette jusqu'au support des utilisateurs.",
     points: [
-      'J’ai participé au déploiement d’une plateforme interne de communication, de gestion et de suivi des tâches',
       'J’ai conçu les maquettes des interfaces sur Figma, puis développé le front-end (HTML, CSS, JavaScript, jQuery, Bootstrap)',
       'J’ai développé la partie back-end en PHP Laravel pour la gestion des données',
       'J’ai formé les utilisateurs et assuré le support technique',
