@@ -5,7 +5,7 @@ export const profile = {
   role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI Nanterre, passionné par la gestion et la valorisation des données. J'aspire à faire carrière dans deux domaines : la data et le développement full-stack. Je cherche une entreprise où mettre mes qualités au service de sa croissance, tout en continuant d'aiguiser mes compétences.",
+    "Élève ingénieur en 5e année à CESI Nanterre, passionné par la gestion et la valorisation des données. Enthousiaste à l'idée de travailler en data et en développement back-end, je cherche une entreprise où mettre mes qualités au service de sa croissance, tout en continuant d'aiguiser mes compétences.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
@@ -44,11 +44,13 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis en place un pipeline ETL, en développant des scripts qui automatisent les processus commerciaux pour réduire les tâches manuelles.",
+      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis en place un pipeline ETL : récupérer les données via des API, automatiser leur collecte avec des scripts, puis les traiter pour les rendre exploitables.",
     points: [
-      'J’ai développé des fonctions personnalisées en Deluge, configuré des webhooks et intégré des API REST externes',
-      'J’ai orchestré les workflows dans la suite Zoho (CRM, Flow, Sheet, DataPrep, Analytics)',
-      'Résultat : moins de tâches manuelles, un CRM plus fiable et des données exploitables pour la prospection, le suivi commercial et le reporting',
+      'J’ai récupéré les données de plusieurs outils via leurs API REST et des webhooks',
+      'J’ai développé des scripts en Deluge pour automatiser cette collecte et la synchronisation avec le CRM',
+      'J’ai nettoyé, transformé et structuré les données avec Zoho DataPrep',
+      'J’ai chargé les données dans Zoho Analytics et orchestré les workflows de la suite Zoho (CRM, Flow, Sheet)',
+      'Moins de tâches manuelles, un CRM plus fiable et des données exploitables pour la prospection, le suivi commercial et le reporting',
     ],
     stack: ['ETL', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'Zoho Flow', 'Deluge', 'API REST', 'Webhooks'],
   },
@@ -61,10 +63,12 @@ export const experiences = [
     summary:
       "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
-      'J’ai conçu et implémenté des fonctionnalités back-end sécurisées',
-      'J’ai réalisé une interface utilisateur claire et intuitive en React',
+      'J’ai développé l’API en .NET Core (C#) : gestion des utilisateurs, des rôles et des droits d’accès',
+      'J’ai sécurisé les accès et protégé les données côté back-end',
+      'J’ai conçu l’interface d’administration en React, avec une vue de visualisation 3D',
+      'J’ai documenté l’API avec Swagger',
     ],
-    stack: ['C#', '.NET Core', 'React', 'SQL Server'],
+    stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
   },
   {
     company: 'IziSolutions',

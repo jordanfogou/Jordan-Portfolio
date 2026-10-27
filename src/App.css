@@ -686,14 +686,10 @@ main,
 }
 
 .timeline-points li::before {
-  content: '';
+  content: '–';
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: var(--ink-soft);
+  color: var(--accent);
 }
 
 .timeline-stack {
