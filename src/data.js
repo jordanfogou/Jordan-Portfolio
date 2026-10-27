@@ -5,7 +5,7 @@ export const profile = {
   role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI Nanterre, je suis passionné par la gestion et la valorisation des données, de l'API qui les produit jusqu'au pipeline qui les rend exploitables. C'est pourquoi je recherche un stage dans deux métiers étroitement liés : le développement back-end et le data engineering.",
+    "Élève ingénieur en 5e année à CESI Nanterre, passionné par la gestion et la valorisation des données. J'aspire à faire carrière dans deux domaines : la data et le développement full-stack. Je cherche une entreprise où mettre mes qualités au service de sa croissance, tout en continuant d'aiguiser mes compétences.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
@@ -44,9 +44,7 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie unifiée et de communication professionnelle.",
-    brief:
-      "J'ai mis en place un pipeline ETL en développant des scripts qui automatisent les processus commerciaux de l'entreprise, afin de réduire les tâches manuelles et de fiabiliser les données du CRM.",
+      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis en place un pipeline ETL, en développant des scripts qui automatisent les processus commerciaux pour réduire les tâches manuelles.",
     points: [
       'J’ai développé des fonctions personnalisées en Deluge, configuré des webhooks et intégré des API REST externes',
       'J’ai orchestré les workflows dans la suite Zoho (CRM, Flow, Sheet, DataPrep, Analytics)',
@@ -60,7 +58,7 @@ export const experiences = [
     place: 'Reims',
     period: 'juil. 2024 – sept. 2024',
     logo: '/ogmentis_logo.jpg',
-    brief:
+    summary:
       "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
       'J’ai conçu et implémenté des fonctionnalités back-end sécurisées',
@@ -74,7 +72,7 @@ export const experiences = [
     place: 'Yaoundé, Cameroun',
     period: 'mai 2023 – juil. 2023',
     logo: '/izisolutionscm_logo.jpg',
-    brief:
+    summary:
       "J'ai participé au développement d'une plateforme interne de gestion de projets et de communication, de la maquette jusqu'au support des utilisateurs.",
     points: [
       'J’ai conçu les maquettes des interfaces sur Figma, puis développé le front-end (HTML, CSS, JavaScript, jQuery, Bootstrap)',

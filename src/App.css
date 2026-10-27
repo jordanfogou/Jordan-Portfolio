@@ -672,20 +672,6 @@ main,
   font-size: 0.95rem;
 }
 
-.timeline-brief {
-  margin-top: 0.9rem;
-  padding: 0.7rem 0.9rem;
-  border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  background: rgba(46, 196, 176, 0.08);
-  color: var(--ink);
-  font-size: 0.95rem;
-}
-
-.timeline-brief strong {
-  color: var(--accent);
-}
-
 .timeline-points {
   margin-top: 1rem;
   display: grid;
