@@ -2,19 +2,19 @@
 
 export const profile = {
   name: 'Jordan Fogou',
-  role: 'Data Engineer',
+  role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI Nanterre, je construis des pipelines qui collectent, transforment et rendent exploitables les données d'une entreprise. En stage, j'ai automatisé des flux ETL autour d'un CRM ; en projet, j'ai conçu des modèles de deep learning et un ERP avec tableau de bord.",
+    "Élève ingénieur en 5e année à CESI Nanterre, je conçois des API, des bases de données et des pipelines de données, avec SQL et Python comme socle commun. En stage, j'ai intégré des API et automatisé des flux ETL autour d'un CRM ; en projet, j'ai piloté un ERP mis en production, de l'API NestJS au tableau de bord.",
   status:
-    "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027, en data engineering ou en data.",
+    "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027, en développement back-end ou en data engineering.",
   location: 'Île-de-France',
   email: 'jordanfogou443@gmail.com',
   links: {
     github: 'https://github.com/jordanfogou',
     linkedin: 'https://www.linkedin.com/in/jordan-fogou-6578a4295/',
   },
-  cv: '/CV jordan_FOGOU_alternant_DEVFULLSTACK.pdf',
+  cv: '/CV_Jordan_FOGOU_Backend_Data_Engineer.pdf',
 };
 
 export const navLinks = [
@@ -26,14 +26,14 @@ export const navLinks = [
 ];
 
 export const about =
-  "Ce qui m'intéresse, c'est le chemin que suivent les données : d'où elles viennent, comment les fiabiliser, et ce qu'on peut en tirer. J'ai mis sur pied un pipeline de données CRM en entreprise, entraîné des modèles de vision et de NLP en projet, et je m'appuie sur mon expérience de développeur (API, back-end, bases de données) pour livrer des solutions qui tournent vraiment en production.";
+  "Ce qui m'intéresse, c'est ce qui se passe derrière l'écran : les API qui font tourner une application, les bases de données qui la portent, et les pipelines qui transforment ses données en décisions. J'ai développé des fonctionnalités back-end en .NET Core, mis sur pied un pipeline de données CRM en entreprise, et piloté un ERP mis en production. Je me forme en continu, en ce moment sur Java Spring Boot et Databricks.";
 
 // icon : clé de l'icône dans src/components/About.js
 export const services = [
+  { title: 'Back-end et API', text: 'API REST en NestJS, .NET ou Spring Boot, authentification JWT, mise en production', icon: 'code' },
   { title: 'Pipelines de données', text: 'Flux ETL, intégration d’API et de webhooks, automatisation des échanges entre outils', icon: 'pipeline' },
-  { title: 'Modélisation et SQL', text: 'Schémas relationnels, requêtes, qualité et fiabilité des données', icon: 'db' },
+  { title: 'Bases de données et SQL', text: 'Modélisation relationnelle, requêtes, qualité et fiabilité des données', icon: 'db' },
   { title: 'Machine learning', text: 'Vision par ordinateur et NLP avec TensorFlow/Keras, évaluation des modèles', icon: 'ml' },
-  { title: 'Développement et API', text: 'Back-end NestJS ou .NET, interfaces React, mise en production', icon: 'code' },
 ];
 
 export const experiences = [
@@ -98,6 +98,18 @@ export const experiences = [
 // Compétences regroupées par catégorie. icon : clé dans src/components/Tech.js
 export const skillGroups = [
   {
+    title: 'Back-end et API',
+    icon: 'back',
+    skills: [
+      { name: 'Node.js', icon: 'SiNodedotjs' },
+      { name: 'NestJS', icon: 'SiNestjs' },
+      { name: '.NET / C#', icon: 'SiDotnet' },
+      { name: 'PHP', icon: 'SiPhp' },
+      { name: 'Java (en formation)', icon: 'SiOpenjdk' },
+      { name: 'Spring Boot (en formation)', icon: 'SiSpringboot' },
+    ],
+  },
+  {
     title: 'Data engineering',
     icon: 'pipeline',
     skills: [
@@ -106,6 +118,27 @@ export const skillGroups = [
       { name: 'Pandas', icon: 'SiPandas' },
       { name: 'ETL / API', icon: 'SiZoho' },
       { name: 'Tableaux de bord', icon: 'SiChartdotjs' },
+    ],
+  },
+  {
+    title: 'Bases de données',
+    icon: 'db',
+    skills: [
+      { name: 'PostgreSQL', icon: 'SiPostgresql' },
+      { name: 'Prisma', icon: 'SiPrisma' },
+      { name: 'MySQL', icon: 'SiMysql' },
+      { name: 'MongoDB', icon: 'SiMongodb' },
+    ],
+  },
+  {
+    title: 'DevOps et outils',
+    icon: 'tools',
+    skills: [
+      { name: 'Git', icon: 'SiGit' },
+      { name: 'Docker', icon: 'SiDocker' },
+      { name: 'GitHub Actions', icon: 'SiGithubactions' },
+      { name: 'Render', icon: 'SiRender' },
+      { name: 'Linux', icon: 'SiLinux' },
     ],
   },
   {
@@ -120,27 +153,6 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Bases de données',
-    icon: 'db',
-    skills: [
-      { name: 'PostgreSQL', icon: 'SiPostgresql' },
-      { name: 'Prisma', icon: 'SiPrisma' },
-      { name: 'MySQL', icon: 'SiMysql' },
-      { name: 'MongoDB', icon: 'SiMongodb' },
-    ],
-  },
-  {
-    title: 'Back-end et API',
-    icon: 'back',
-    skills: [
-      { name: 'Node.js', icon: 'SiNodedotjs' },
-      { name: 'NestJS', icon: 'SiNestjs' },
-      { name: '.NET / C#', icon: 'SiDotnet' },
-      { name: 'PHP', icon: 'SiPhp' },
-      { name: 'Spring Boot (en formation)', icon: 'SiSpringboot' },
-    ],
-  },
-  {
     title: 'Front-end',
     icon: 'front',
     skills: [
@@ -148,17 +160,6 @@ export const skillGroups = [
       { name: 'TypeScript', icon: 'SiTypescript' },
       { name: 'JavaScript', icon: 'SiJavascript' },
       { name: 'Tailwind CSS', icon: 'SiTailwindcss' },
-    ],
-  },
-  {
-    title: 'DevOps et outils',
-    icon: 'tools',
-    skills: [
-      { name: 'Git', icon: 'SiGit' },
-      { name: 'Docker', icon: 'SiDocker' },
-      { name: 'GitHub Actions', icon: 'SiGithubactions' },
-      { name: 'Render', icon: 'SiRender' },
-      { name: 'Linux', icon: 'SiLinux' },
     ],
   },
 ];
@@ -177,6 +178,16 @@ export const projects = [
     live: 'https://transvirex-front1.onrender.com',
   },
   {
+    name: 'Gestionnaire de tâches',
+    label: 'En cours',
+    description:
+      "Projet personnel pour monter en compétences sur Java. J'ai développé une API Spring Boot sécurisée par JWT, avec JPA/Hibernate sur PostgreSQL, et un front Angular.",
+    tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
+    icon: 'tasks',
+    github: '',
+    live: '',
+  },
+  {
     name: 'Leyenda : vision et NLP',
     label: 'Projet de groupe',
     icon: 'ml',
@@ -192,16 +203,6 @@ export const projects = [
     description:
       'En binôme, nous avons développé un algorithme de planification de tâches qui réduit le nombre de serveurs actifs dans un data center, puis analysé les résultats en Python.',
     tags: ['Python', 'NetworkX', 'Pandas'],
-    github: '',
-    live: '',
-  },
-  {
-    name: 'Gestionnaire de tâches',
-    label: 'En cours',
-    description:
-      "Projet personnel pour monter en compétences sur Java. J'ai développé une API Spring Boot sécurisée par JWT, avec JPA/Hibernate sur PostgreSQL, et un front Angular.",
-    tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
-    icon: 'tasks',
     github: '',
     live: '',
   },
