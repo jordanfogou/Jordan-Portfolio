@@ -46,9 +46,9 @@ export const experiences = [
     summary:
       "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un système de scraping automatisé pour enrichir nos bases de données.",
     points: [
-      'Chaîne entièrement automatisée dans Zoho Flow, de la collecte des données jusqu’à leur intégration dans le CRM.',
-      'Fonctions Deluge et appels d’API pour récupérer les données sans aucune saisie manuelle.',
-      'Données nettoyées et structurées avec Zoho DataPrep, puis transformées en rapports utiles à l’équipe commerciale.',
+      'Chaîne entièrement automatisée dans Zoho Flow, de la collecte des données jusqu’à leur intégration dans le CRM',
+      'Fonctions Deluge et appels d’API pour récupérer les données sans aucune saisie manuelle',
+      'Données nettoyées et structurées avec Zoho DataPrep, puis transformées en rapports utiles à l’équipe commerciale',
     ],
     stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API REST', 'Webhooks'],
   },
