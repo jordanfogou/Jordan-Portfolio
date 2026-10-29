@@ -14,7 +14,7 @@ export const profile = {
     github: 'https://github.com/jordanfogou',
     linkedin: 'https://www.linkedin.com/in/jordan-fogou-6578a4295/',
   },
-  cv: '/CV_Jordan_FOGOU_Backend_Data_Engineer.pdf',
+  cv: '/CV_Jordan_FOGOU_Stage_PFE.pdf',
 };
 
 export const navLinks = [
