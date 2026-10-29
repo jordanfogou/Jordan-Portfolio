@@ -5,7 +5,7 @@ export const profile = {
   role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI Nanterre, passionné par la gestion et la valorisation des données. Enthousiaste à l'idée de travailler en data et en développement back-end, je cherche une entreprise où mettre mes qualités au service de sa croissance, tout en continuant d'aiguiser mes compétences.",
+    "Élève ingénieur en 5e année à CESI Nanterre, passionné par la gestion et la valorisation des données. Enthousiaste à l'idée de travailler sur des sujets liés à la data, avec une appétence pour le développement back-end, je cherche une entreprise où mettre mes qualités au service de sa croissance, tout en continuant d'aiguiser mes compétences.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
