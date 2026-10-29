@@ -44,11 +44,12 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un système de scraping automatisé pour enrichir nos bases de données.",
+      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis sur pied et automatisé un pipeline ETL pour simplifier le quotidien de l'équipe marketing.",
     points: [
+      'Système de scraping automatisé pour enrichir nos bases de données',
       'Chaîne entièrement automatisée dans Zoho Flow, de la collecte des données jusqu’à leur intégration dans le CRM',
       'Fonctions Deluge et appels d’API pour récupérer les données sans aucune saisie manuelle',
-      'Données nettoyées et structurées avec Zoho DataPrep, puis transformées en rapports utiles à l’équipe commerciale',
+      'Données nettoyées et structurées avec Zoho DataPrep, puis transformées en rapports utiles à l’équipe',
     ],
     stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API REST', 'Webhooks'],
   },
@@ -59,7 +60,7 @@ export const experiences = [
     period: 'juil. 2024 – sept. 2024',
     logo: '/ogmentis_logo.jpg',
     summary:
-      "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
+      "J'ai développé de bout en bout l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
       'Conception de la gestion des utilisateurs, des rôles et des droits d’accès de l’API (C#, .NET Core)',
       'Accès aux données de l’application sécurisé côté back-end',
@@ -75,7 +76,7 @@ export const experiences = [
     period: 'avr. 2022 – juin 2022',
     logo: '/izisolutionscm_logo.jpg',
     summary:
-      "J'ai participé au développement d'une plateforme interne de gestion de projets et de messagerie, de la maquette jusqu'à la mise en service.",
+      "J'ai participé à la création d'une plateforme interne pour mieux organiser les projets et la communication des équipes.",
     points: [
       'Maquettes des interfaces conçues sur Figma, puis interface responsive avec Bootstrap',
       'Back-end développé en PHP avec Twig, sur une base MariaDB',
