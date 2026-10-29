@@ -46,9 +46,9 @@ export const experiences = [
     summary:
       "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un process qui, à partir du seul nom d'une entreprise, va chercher ses données, les traite et les envoie dans le CRM.",
     points: [
-      'J’ai mis sur pied un système de scraping automatisé : à partir du seul nom d’une entreprise, il récupère et enrichit ses données clés via les API Piloterr et Kanbox',
-      'J’ai automatisé toute la chaîne dans Zoho Flow avec des fonctions Deluge, de l’appel d’API jusqu’au CRM, sans aucune saisie manuelle',
-      'J’ai fiabilisé les données avec Zoho DataPrep et livré à l’équipe commerciale des rapports exploitables dans Zoho Analytics',
+      'Un système de scraping automatisé qui, à partir du seul nom d’une entreprise, récupère et enrichit ses données clés via les API Piloterr et Kanbox',
+      'Toute la chaîne automatisée dans Zoho Flow grâce à des fonctions Deluge, de l’appel d’API jusqu’au CRM, sans aucune saisie manuelle',
+      'Des données fiabilisées avec Zoho DataPrep et transformées en rapports exploitables pour l’équipe commerciale (Zoho Analytics)',
     ],
     stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API Piloterr', 'Kanbox', 'Webhooks'],
   },
@@ -61,10 +61,10 @@ export const experiences = [
     summary:
       "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
-      'J’ai conçu la gestion des utilisateurs, des rôles et des droits d’accès de l’API (C#, .NET Core)',
-      'J’ai sécurisé l’accès aux données de l’application',
-      'J’ai intégré une vue de visualisation 3D dans l’interface d’administration React',
-      'J’ai documenté l’API sous Swagger pour faciliter le travail de l’équipe',
+      'Conception de la gestion des utilisateurs, des rôles et des droits d’accès de l’API (C#, .NET Core)',
+      'Accès aux données de l’application sécurisé côté back-end',
+      'Intégration d’une vue de visualisation 3D dans l’interface d’administration React',
+      'API documentée sous Swagger pour faciliter le travail de l’équipe',
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
   },
@@ -77,9 +77,9 @@ export const experiences = [
     summary:
       "J'ai participé au développement d'une plateforme interne de gestion de projets et de messagerie, de la maquette jusqu'à la mise en service.",
     points: [
-      'J’ai conçu les maquettes des interfaces sur Figma, puis l’interface responsive avec Bootstrap',
-      'J’ai développé le back-end en PHP avec Twig, sur une base MariaDB',
-      'J’ai accompagné la mise en service en formant les utilisateurs et en assurant le support',
+      'Maquettes des interfaces conçues sur Figma, puis interface responsive avec Bootstrap',
+      'Back-end développé en PHP avec Twig, sur une base MariaDB',
+      'Mise en service accompagnée : formation des utilisateurs et support technique',
     ],
     stack: ['PHP', 'Twig', 'MariaDB', 'Bootstrap', 'Figma'],
   },
