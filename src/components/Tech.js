@@ -34,6 +34,8 @@ import {
   SiScikitlearn,
   SiNumpy,
   SiJupyter,
+  SiGitlab,
+  SiJira,
 } from 'react-icons/si';
 import Section from './Section';
 import { skillGroups } from '../data';
@@ -73,6 +75,8 @@ const skillIcons = {
   SiScikitlearn,
   SiNumpy,
   SiJupyter,
+  SiGitlab,
+  SiJira,
 };
 
 const groupIcons = {

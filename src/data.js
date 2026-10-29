@@ -44,15 +44,14 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. J'y ai mis en place un pipeline ETL : récupérer les données via des API, automatiser leur collecte avec des scripts, puis les traiter pour les rendre exploitables.",
+      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un process qui, à partir du seul nom d'une entreprise, va chercher ses données, les traite et les envoie dans le CRM.",
     points: [
-      'Grâce aux API REST et aux webhooks des différents outils, j’ai pu récupérer automatiquement les données commerciales',
-      'En développant des scripts en Deluge, j’ai automatisé cette collecte et la synchronisation avec le CRM',
-      'Avec Zoho DataPrep, j’ai pu nettoyer, transformer et structurer les données',
-      'En chargeant les données dans Zoho Analytics et en orchestrant les workflows Zoho (CRM, Flow, Sheet), je les ai rendues exploitables pour le reporting',
-      'Grâce à ce pipeline, l’équipe a réduit ses tâches manuelles et dispose d’un CRM fiable pour la prospection et le suivi commercial',
+      'Collecte et enrichissement des données d’entreprises via les API Piloterr et Kanbox',
+      'Fonctions Deluge dans Zoho Flow pour enchaîner les appels d’API et alimenter le CRM sans saisie manuelle',
+      'Nettoyage et structuration des données dans Zoho DataPrep',
+      'Reporting commercial dans Zoho Analytics, à partir des données collectées',
     ],
-    stack: ['ETL', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'Zoho Flow', 'Deluge', 'API REST', 'Webhooks'],
+    stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API Piloterr', 'Kanbox', 'Webhooks'],
   },
   {
     company: 'OGMENTIS',
@@ -63,27 +62,27 @@ export const experiences = [
     summary:
       "J'ai développé l'espace administrateur d'une application SaaS de réalité augmentée, de l'API en .NET Core jusqu'à l'interface React.",
     points: [
-      'En développant l’API en .NET Core (C#), j’ai mis en place la gestion des utilisateurs, des rôles et des droits d’accès',
-      'Grâce à la sécurisation des accès côté back-end, j’ai pu protéger les données de l’application',
-      'Avec React, j’ai conçu l’interface d’administration, dont une vue de visualisation 3D',
-      'Grâce à Swagger, j’ai documenté l’API pour que l’équipe puisse l’utiliser facilement',
+      'Gestion des utilisateurs, des rôles et des droits d’accès côté API (C#, .NET Core)',
+      'Sécurisation des accès aux données de l’application',
+      'Interface d’administration en React, avec une vue de visualisation 3D',
+      'Documentation de l’API sous Swagger',
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
   },
   {
     company: 'IziSolutions',
-    role: 'Stagiaire informaticien support',
+    role: 'Développeur web (stage)',
     place: 'Yaoundé, Cameroun',
-    period: 'mai 2023 – juil. 2023',
+    period: 'avr. 2022 – juin 2022',
     logo: '/izisolutionscm_logo.jpg',
     summary:
-      "J'ai participé au développement d'une plateforme interne de gestion de projets et de communication, de la maquette jusqu'au support des utilisateurs.",
+      "J'ai participé au développement d'une plateforme interne de gestion de projets et de messagerie, de la maquette jusqu'à la mise en service.",
     points: [
-      'Grâce à des maquettes conçues sur Figma, j’ai pu valider les interfaces avant de développer le front-end (HTML, CSS, JavaScript, jQuery, Bootstrap)',
-      'En PHP Laravel, j’ai développé la partie back-end qui gère les données de la plateforme',
-      'En formant les utilisateurs et en assurant le support, j’ai facilité la prise en main de l’outil',
+      'Maquettes des interfaces sur Figma, puis interface responsive avec Bootstrap',
+      'Back-end en PHP avec Twig, base de données MariaDB',
+      'Formation des utilisateurs et support technique après la mise en service',
     ],
-    stack: ['PHP', 'Laravel', 'JavaScript', 'jQuery', 'Bootstrap', 'Figma'],
+    stack: ['PHP', 'Twig', 'MariaDB', 'Bootstrap', 'Figma'],
   },
 ];
 
@@ -97,8 +96,8 @@ export const skillGroups = [
       { name: 'NestJS', icon: 'SiNestjs' },
       { name: '.NET / C#', icon: 'SiDotnet' },
       { name: 'PHP', icon: 'SiPhp' },
-      { name: 'Java (en formation)', icon: 'SiOpenjdk' },
-      { name: 'Spring Boot (en formation)', icon: 'SiSpringboot' },
+      { name: 'Java', icon: 'SiOpenjdk' },
+      { name: 'Spring Boot', icon: 'SiSpringboot' },
     ],
   },
   {
@@ -128,6 +127,8 @@ export const skillGroups = [
     skills: [
       { name: 'Git', icon: 'SiGit' },
       { name: 'Docker', icon: 'SiDocker' },
+      { name: 'GitLab', icon: 'SiGitlab' },
+      { name: 'Jira', icon: 'SiJira' },
       { name: 'GitHub Actions', icon: 'SiGithubactions' },
       { name: 'Render', icon: 'SiRender' },
       { name: 'Linux', icon: 'SiLinux' },
@@ -164,14 +165,14 @@ export const projects = [
     label: 'Projet piloté',
     image: '/projects/transvirex.jpg',
     description:
-      "Au sein d'un groupe d'étudiants, j'ai piloté le projet. Nous avons conçu un ERP logistique qui centralise les données d'une entreprise de transport (clients, chauffeurs, véhicules, livraisons, factures) dans un modèle PostgreSQL, et les restitue dans un tableau de bord d'indicateurs pour la direction : taux de réussite des livraisons, chiffre d'affaires, disponibilité des chauffeurs. Mis en production.",
+      "Au sein d'un groupe de trois étudiants, j'ai piloté le projet. Nous avons conçu un ERP logistique qui centralise les données d'une entreprise de transport (clients, chauffeurs, véhicules, livraisons, factures) dans un modèle PostgreSQL, et les restitue dans un tableau de bord d'indicateurs pour la direction : taux de réussite des livraisons, chiffre d'affaires, disponibilité des chauffeurs. Mis en production.",
     tags: ['PostgreSQL', 'Prisma', 'Modélisation', 'Dashboard', 'NestJS', 'React'],
     github: '',
     live: 'https://transvirex-front1.onrender.com',
   },
   {
     name: 'Gestionnaire de tâches',
-    label: 'En cours',
+    label: 'Projet personnel',
     description:
       "Projet personnel pour monter en compétences sur Java. J'ai développé une API Spring Boot sécurisée par JWT, avec JPA/Hibernate sur PostgreSQL, et un front Angular.",
     tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
