@@ -44,13 +44,13 @@ export const experiences = [
     period: 'janv. 2025 – mai 2025',
     logo: '/mixxit.jpg',
     summary:
-      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un process qui, à partir du seul nom d'une entreprise, va chercher ses données, les traite et les envoie dans le CRM.",
+      "Mixxit édite des solutions de téléphonie et de communication pour les entreprises. Pendant ce stage de 5 mois, j'ai mis sur pied un système de scraping automatisé pour enrichir nos bases de données.",
     points: [
-      'Un système de scraping automatisé qui, à partir du seul nom d’une entreprise, récupère et enrichit ses données clés via les API Piloterr et Kanbox',
-      'Toute la chaîne automatisée dans Zoho Flow grâce à des fonctions Deluge, de l’appel d’API jusqu’au CRM, sans aucune saisie manuelle',
-      'Des données fiabilisées avec Zoho DataPrep et transformées en rapports exploitables pour l’équipe commerciale (Zoho Analytics)',
+      'Chaîne entièrement automatisée dans Zoho Flow, de la collecte des données jusqu’à leur intégration dans le CRM.',
+      'Fonctions Deluge et appels d’API pour récupérer les données sans aucune saisie manuelle.',
+      'Données nettoyées et structurées avec Zoho DataPrep, puis transformées en rapports utiles à l’équipe commerciale.',
     ],
-    stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API Piloterr', 'Kanbox', 'Webhooks'],
+    stack: ['ETL', 'Zoho Flow', 'Deluge', 'Zoho DataPrep', 'Zoho Analytics', 'Zoho CRM', 'API REST', 'Webhooks'],
   },
   {
     company: 'OGMENTIS',
