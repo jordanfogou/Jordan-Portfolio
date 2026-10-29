@@ -5,7 +5,7 @@ export const profile = {
   role: 'Développeur back-end & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Profil data et back-end, ouvert aux projets IT. Élève ingénieur en 5e année à CESI (campus de Nanterre), je souhaite m'investir dans un projet concret et bien défini, aux objectifs clairs, pour monter en compétences et apporter un vrai plus à ma future équipe.",
+    "Profil data et back-end, ouvert aux projets IT concrets, bien définis et aux objectifs clairs. Je suis élève ingénieur en 5e année à CESI (campus de Nanterre), prêt à monter en compétences et à apporter un vrai plus à ma future équipe.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
@@ -26,7 +26,7 @@ export const navLinks = [
 ];
 
 export const about =
-  "Dès ma première année du cycle ingénieur, j'ai été fasciné par ce qui se passe derrière l'écran : les API qui font tourner une application, les bases de données qui la portent, et les pipelines qui transforment ses données en décisions. Depuis, je travaille sur les deux versants de ce même sujet. Côté développement, j'ai conçu des API et des applications full-stack en .NET Core, NestJS et React, jusqu'à leur mise en production. Côté data, j'ai mis sur pied un pipeline ETL en entreprise et modélisé des bases de données qui alimentent des tableaux de bord. Je me forme en continu, en ce moment sur Java Spring Boot et Databricks.";
+  "Dès ma première année du cycle ingénieur, j'ai été fasciné par ce qui se passe derrière l'écran : les API, les bases de données et les pipelines qui transforment les données en décisions. La data et le back-end sont devenus mes domaines de prédilection, sans que je m'y limite : j'ai aussi développé des interfaces, piloté une équipe jusqu'à la mise en production et formé des utilisateurs. J'aime comprendre la vision d'un projet avant de m'y lancer, découvrir de nouveaux environnements et monter en compétences.";
 
 // icon : clé de l'icône dans src/components/About.js
 export const services = [
