@@ -9,7 +9,7 @@ export const profile = {
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
-  email: 'jordanfogou443@gmail.com',
+  email: 'jordan.fogou@viacesi.fr',
   links: {
     github: 'https://github.com/jordanfogou',
     linkedin: 'https://www.linkedin.com/in/jordan-fogou-6578a4295/',
