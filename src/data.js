@@ -2,10 +2,10 @@
 
 export const profile = {
   name: 'Jordan Fogou',
-  role: 'Développeur back-end & Data Engineer',
+  role: 'Développeur logiciel & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Profil data et back-end, ouvert aux projets IT concrets. Je suis élève ingénieur en 5e année à CESI (campus de Nanterre), prêt à solidifier mes compétences et à apporter un vrai plus à l'entreprise.",
+    "Profil data et développement logiciel, ouvert aux projets IT concrets. Je suis élève ingénieur en 5e année à CESI (campus de Nanterre), prêt à mettre en pratique mes connaissances, à solidifier mes compétences et à apporter un vrai plus à l'entreprise.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
@@ -14,7 +14,6 @@ export const profile = {
     github: 'https://github.com/jordanfogou',
     linkedin: 'https://www.linkedin.com/in/jordan-fogou-6578a4295/',
   },
-  cv: '/CV_Jordan_FOGOU_Stage_PFE.pdf',
 };
 
 export const navLinks = [
@@ -26,7 +25,7 @@ export const navLinks = [
 ];
 
 export const about =
-  "Dès ma première année du cycle ingénieur, j'ai été fasciné par ce qui se passe derrière l'écran : les API, les bases de données et les pipelines qui transforment les données en décisions. La data et le back-end sont devenus mes domaines de prédilection, sans que je m'y limite : j'ai aussi développé des interfaces, piloté une équipe jusqu'à la mise en production et formé des utilisateurs. J'aime comprendre la vision d'un projet avant de m'y lancer, découvrir de nouveaux environnements et monter en compétences.";
+  "Dès ma première année du cycle ingénieur, j'ai été fasciné par ce qui se passe derrière l'écran : les applications, les API et les bases de données qui les font tourner, et les pipelines qui transforment leurs données en décisions. Le développement logiciel et la data sont devenus mes domaines de prédilection, sans que je m'y limite : j'ai conçu des API et des interfaces, piloté une équipe jusqu'à la mise en production et formé des utilisateurs. J'aime comprendre la vision d'un projet avant de m'y lancer, découvrir de nouveaux environnements et mettre en pratique mes connaissances.";
 
 // icon : clé de l'icône dans src/components/About.js
 export const services = [
