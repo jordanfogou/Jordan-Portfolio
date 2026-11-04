@@ -84,6 +84,21 @@ export const experiences = [
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
   },
+  {
+    company: 'IziSolutions',
+    role: 'Développeur web (stage)',
+    place: 'Yaoundé, Cameroun',
+    period: 'avr. 2022 – juin 2022',
+    logo: '/izisolutionscm_logo.jpg',
+    summary:
+      "J'ai participé à la création d'une plateforme interne pour mieux organiser les projets et la communication des équipes.",
+    points: [
+      'Maquettes des interfaces conçues sur Figma, puis interface responsive avec Bootstrap',
+      'Back-end développé en PHP avec Twig, sur une base MariaDB',
+      'Mise en service accompagnée : formation des utilisateurs et support technique',
+    ],
+    stack: ['PHP', 'Twig', 'MariaDB', 'Bootstrap', 'Figma'],
+  },
 ];
 
 // Compétences regroupées par catégorie. icon : clé dans src/components/Tech.js
