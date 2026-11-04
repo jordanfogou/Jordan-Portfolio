@@ -38,19 +38,19 @@ export const services = [
 export const experiences = [
   {
     company: 'Future Cascade',
-    role: 'Software Engineer, Backend & Automation (stage)',
+    role: 'Software Engineer, Application Development & IT Solutions (stage)',
     place: 'Fundão, Portugal (hybride)',
     period: 'sept. 2025 – janv. 2026',
     logo: '/future-cascade.png',
     summary:
-      "Future Cascade est une société de conseil et de développement logiciel. J'y ai conçu et développé des solutions logicielles pour automatiser les processus métiers et fluidifier les échanges de données entre les systèmes d'information.",
+      "Dans une startup de conseil et de développement de solutions informatiques B2B, j'ai travaillé directement avec le DSI sur la conception et le développement de solutions logicielles pour moderniser les systèmes d'information des clients et optimiser leurs performances.",
     points: [
-      'Intégrations via API REST et webhooks pour interconnecter le site web, le CRM et les outils tiers',
-      'Pipelines ETL pour automatiser la collecte, le nettoyage et la synchronisation des données',
-      'Scripts d’automatisation et workflows métiers, avec contrôle et gestion des erreurs',
-      'Optimisation des traitements de données',
+      'Analyse des besoins clients, conception technique et développement de solutions adaptées aux problématiques métiers',
+      'Développement back-end, conception d’API REST et intégration de services tiers pour interconnecter les systèmes d’information',
+      'Scripts et workflows d’automatisation pour optimiser les processus métiers et les échanges de données',
+      'Optimisation des performances, tests techniques et amélioration de la fiabilité des solutions déployées',
     ],
-    stack: ['Python', 'JavaScript', 'SQL', 'API REST', 'Webhooks', 'ETL', 'Git', 'Zoho'],
+    stack: ['Python', 'JavaScript', 'SQL', 'API REST', 'Webhooks', 'Git'],
   },
   {
     company: 'Mixxit (MOOVIT SAS)',
@@ -83,21 +83,6 @@ export const experiences = [
       'API documentée sous Swagger pour faciliter le travail de l’équipe',
     ],
     stack: ['C#', '.NET Core', 'React', 'SQL Server', 'Swagger'],
-  },
-  {
-    company: 'IziSolutions',
-    role: 'Développeur web (stage)',
-    place: 'Yaoundé, Cameroun',
-    period: 'avr. 2022 – juin 2022',
-    logo: '/izisolutionscm_logo.jpg',
-    summary:
-      "J'ai participé à la création d'une plateforme interne pour mieux organiser les projets et la communication des équipes.",
-    points: [
-      'Maquettes des interfaces conçues sur Figma, puis interface responsive avec Bootstrap',
-      'Back-end développé en PHP avec Twig, sur une base MariaDB',
-      'Mise en service accompagnée : formation des utilisateurs et support technique',
-    ],
-    stack: ['PHP', 'Twig', 'MariaDB', 'Bootstrap', 'Figma'],
   },
 ];
 
