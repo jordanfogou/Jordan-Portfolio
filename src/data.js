@@ -38,8 +38,8 @@ export const services = [
 export const experiences = [
   {
     company: 'Future Cascade',
-    role: 'Software Engineer, Application Development & IT Solutions (stage)',
-    place: 'Fundão, Portugal (hybride)',
+    role: 'Software Engineer, IT Solutions (stage)',
+    place: 'Fundão, Portugal',
     period: 'sept. 2025 – janv. 2026',
     logo: '/future-cascade.png',
     summary:
