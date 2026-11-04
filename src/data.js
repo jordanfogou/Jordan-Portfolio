@@ -37,6 +37,22 @@ export const services = [
 
 export const experiences = [
   {
+    company: 'Future Cascade',
+    role: 'Software Engineer, Backend & Automation (stage)',
+    place: 'Fundão, Portugal (hybride)',
+    period: 'sept. 2025 – janv. 2026',
+    logo: '/future-cascade.png',
+    summary:
+      "Future Cascade est une société de conseil et de développement logiciel. J'y ai conçu et développé des solutions logicielles pour automatiser les processus métiers et fluidifier les échanges de données entre les systèmes d'information.",
+    points: [
+      'Intégrations via API REST et webhooks pour interconnecter le site web, le CRM et les outils tiers',
+      'Pipelines ETL pour automatiser la collecte, le nettoyage et la synchronisation des données',
+      'Scripts d’automatisation et workflows métiers, avec contrôle et gestion des erreurs',
+      'Optimisation des traitements de données',
+    ],
+    stack: ['Python', 'JavaScript', 'SQL', 'API REST', 'Webhooks', 'ETL', 'Git', 'Zoho'],
+  },
+  {
     company: 'Mixxit (MOOVIT SAS)',
     role: 'Data Engineer (stage) : pipelines ETL et intégration CRM',
     place: 'Marseille, hybride',
