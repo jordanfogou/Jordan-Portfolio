@@ -42,7 +42,6 @@ export const experiences = [
     place: 'Fundão, Portugal',
     period: 'sept. 2025 – janv. 2026',
     logo: '/future-cascade.png',
-    wordmark: '/future-cascade-wordmark.png',
     summary:
       "Dans une startup de conseil et de développement de solutions informatiques B2B, j'ai travaillé directement avec le DSI sur la conception et le développement de solutions logicielles pour moderniser les systèmes d'information des clients et optimiser leurs performances.",
     points: [
