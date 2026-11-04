@@ -40,6 +40,9 @@ export default function Experience() {
               variants={slideIn(i % 2 === 0 ? 'left' : 'right')}
               {...inView}
             >
+              {exp.wordmark && (
+                <img className="timeline-wordmark" src={asset(exp.wordmark)} alt={`Logo ${exp.company}`} />
+              )}
               <h3>{exp.role}</h3>
               <p className="timeline-company">
                 {exp.company}, {exp.place}
