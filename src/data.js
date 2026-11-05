@@ -2,10 +2,10 @@
 
 export const profile = {
   name: 'Jordan Fogou',
-  role: 'Développeur logiciel & Data Engineer',
+  role: 'Software Engineer & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Profil data et développement logiciel, ouvert aux projets IT concrets. Je suis élève ingénieur en 5e année à CESI (campus de Nanterre), prêt à mettre en pratique mes connaissances, à solidifier mes compétences et à apporter un vrai plus à l'entreprise.",
+    "Élève ingénieur en 5e année à CESI (campus de Nanterre), je développe des logiciels et j'aime automatiser les processus, en m'appuyant sur une vraie appétence pour la data et la mise en place de pipelines. Je suis prêt à mettre en pratique mes connaissances, à solidifier mes compétences et à apporter une réelle valeur ajoutée à vos projets.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
@@ -107,57 +107,41 @@ export const skillGroups = [
     title: 'Back-end et API',
     icon: 'back',
     skills: [
+      { name: 'Java / Spring Boot', icon: 'SiSpringboot' },
+      { name: '.NET / C#', icon: 'SiDotnet' },
       { name: 'Node.js', icon: 'SiNodedotjs' },
       { name: 'NestJS', icon: 'SiNestjs' },
-      { name: '.NET / C#', icon: 'SiDotnet' },
-      { name: 'PHP', icon: 'SiPhp' },
-      { name: 'Java', icon: 'SiOpenjdk' },
-      { name: 'Spring Boot', icon: 'SiSpringboot' },
     ],
   },
   {
-    title: 'Data engineering',
+    title: 'Data et IA',
     icon: 'pipeline',
     skills: [
       { name: 'Python', icon: 'SiPython' },
-      { name: 'SQL', icon: 'SiPostgresql' },
       { name: 'Pandas', icon: 'SiPandas' },
       { name: 'ETL / API', icon: 'SiZoho' },
-      { name: 'Tableaux de bord', icon: 'SiChartdotjs' },
+      { name: 'scikit-learn', icon: 'SiScikitlearn' },
+      { name: 'TensorFlow', icon: 'SiTensorflow' },
     ],
   },
   {
     title: 'Bases de données',
     icon: 'db',
     skills: [
+      { name: 'SQL', icon: 'SiPostgresql' },
       { name: 'PostgreSQL', icon: 'SiPostgresql' },
-      { name: 'Prisma', icon: 'SiPrisma' },
       { name: 'MySQL', icon: 'SiMysql' },
-      { name: 'MongoDB', icon: 'SiMongodb' },
     ],
   },
   {
-    title: 'DevOps et outils',
+    title: 'Outils',
     icon: 'tools',
     skills: [
       { name: 'Git', icon: 'SiGit' },
       { name: 'Docker', icon: 'SiDocker' },
+      { name: 'GitHub Actions', icon: 'SiGithubactions' },
       { name: 'GitLab', icon: 'SiGitlab' },
       { name: 'Jira', icon: 'SiJira' },
-      { name: 'GitHub Actions', icon: 'SiGithubactions' },
-      { name: 'Render', icon: 'SiRender' },
-      { name: 'Linux', icon: 'SiLinux' },
-    ],
-  },
-  {
-    title: 'Machine learning',
-    icon: 'ml',
-    skills: [
-      { name: 'TensorFlow', icon: 'SiTensorflow' },
-      { name: 'Keras', icon: 'SiKeras' },
-      { name: 'scikit-learn', icon: 'SiScikitlearn' },
-      { name: 'NumPy', icon: 'SiNumpy' },
-      { name: 'Jupyter', icon: 'SiJupyter' },
     ],
   },
   {
@@ -166,8 +150,6 @@ export const skillGroups = [
     skills: [
       { name: 'React', icon: 'SiReact' },
       { name: 'TypeScript', icon: 'SiTypescript' },
-      { name: 'JavaScript', icon: 'SiJavascript' },
-      { name: 'Tailwind CSS', icon: 'SiTailwindcss' },
     ],
   },
 ];
