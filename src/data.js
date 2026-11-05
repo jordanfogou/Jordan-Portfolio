@@ -5,7 +5,7 @@ export const profile = {
   role: 'Software Engineer & Data Engineer',
   photo: '/new-profil image.jpg',
   intro:
-    "Élève ingénieur en 5e année à CESI (campus de Nanterre), je développe des logiciels et je construis des pipelines de données. Collecter, fiabiliser et automatiser la donnée pour qu'elle serve vraiment le métier, c'est ce qui me motive : en stage, j'ai automatisé un flux de données complet, de la collecte jusqu'au CRM.",
+    "Élève ingénieur en 5e année à CESI (campus de Nanterre), je développe des logiciels et des pipelines de données, de la conception à la mise en production en passant par leur orchestration. Ce qui me motive : construire des solutions fiables et automatisées qui servent vraiment le métier. En stage, j'ai par exemple automatisé un flux de données complet, de la collecte jusqu'au CRM.",
   status:
     "Disponible pour un stage de fin d'études de 6 mois à partir du 1er février 2027.",
   location: 'Île-de-France',
